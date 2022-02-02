@@ -86,17 +86,15 @@ bundle exec jekyll serve --livereload --trace
   - *baumeister.md*
   - *projektforge.md*
   - *java-api-for-kml.md*
-|   |-- etc
-| 
-| -- **publikationen**
-|   |-- *awesome-lists.md*
-|   |-- *micromata-tv.md*
-|   |-- *etc.*
-|
-| -- **_posts**
-|   |-- *2021-02-12-your-blog-post.md*
-|   |-- *2021-02-12-my-blog-post.md*
-|   |-- *etc.*
+  - *etc.*
+- **publikationen**
+  - *awesome-lists.md*
+  - *micromata-tv.md*
+  - *etc.*
+- **_posts**
+  - *2021-02-12-your-blog-post.md*
+  - *2021-02-12-my-blog-post.md*
+  - *etc.*
 
 ## Adding author details
 
