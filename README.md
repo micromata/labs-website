@@ -74,8 +74,8 @@ bundle exec jekyll serve --livereload --trace
 
 ## Site structure
 
-|-- **commmunity**
-|   |-- *jugh.md*
+|**commmunity**
+|- *jugh.md*
 |   |-- *sec-meetup-kassel.md*
 |   |-- *etc.*
 | 
