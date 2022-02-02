@@ -74,20 +74,18 @@ bundle exec jekyll serve --livereload --trace
 
 ## Site structure
 
-|**commmunity**
-|- *jugh.md*
-|   |-- *sec-meetup-kassel.md*
-|   |-- *etc.*
-| 
-| -- **f-und-e**
-|   |-- *profi.md*
-|   |-- *vaminap.md*
-|   |-- *etc.*
-| 
-| -- **_docs**
-|   |-- *baumeister.md*
-|   |-- *projektforge.md*
-|   |-- *java-api-for-kml.md*
+- **commmunity**
+  - *jugh.md*
+  - *sec-meetup-kassel.md*
+  - *etc.*
+- **f-und-e**
+  - *profi.md*
+  - *vaminap.md*
+  - *etc.*
+- **_docs**
+  - *baumeister.md*
+  - *projektforge.md*
+  - *java-api-for-kml.md*
 |   |-- etc
 | 
 | -- **publikationen**
