@@ -166,7 +166,8 @@ Step 1: Create new project article (for Micromata Open Source projects) in `_doc
 ---
 title: Check Packages
 subtitle: This is your optional doc subtitle
-tags: [npm, node, cli] # Group similar topics; adds a list at page bottom
+image: logo-baumeister.jpg # Add your project logo or image at the top of the page (optional)
+tags: [npm, node, cli] # Group similar topics; adds a list of similar projects at page bottom (optional)
 author: ckuehl
 ---
 ```
