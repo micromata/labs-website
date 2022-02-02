@@ -1,0 +1,31 @@
+# Boxes include navigation
+
+- title: Baumeister
+  desc: Ein einheitliches und gut funktionierendes Projektsetup für das Erstellen von Webanwendungen, unabhängig von Projektgröße und Komplexität.
+  icon:
+  doc: baumeister
+
+- title: ProjectForge
+  desc: Eine webbasiertes Tool zur Unterstützung aller Verwaltungsaufgaben im Projektmanagement und der Unternehmensorganisation.
+  icon:
+  doc: projectforge
+
+- title: GWiki
+  desc: GWiki ist ein wiki-basiertes Contentmanagementsystem (CMS), das in Webapplikationen eingebunden werden kann.
+  icon:
+  doc: check-packages
+
+- title: HTTP Fake Backend
+  desc: Stellt Frontend-Entwicklern komfortabel und flexibel ein simuliertes Backend sowie gemockte Daten für die Anwendungsentwicklung bereit.
+  icon:
+  doc: baumeister
+
+- title: TPSB
+  desc: TPSB ist ein fachlicher und anwendungsorientierter Weg, Testszenerien aufzubauen und durchzuführen.
+  icon:
+  doc: baumeister
+
+- title: Jira Rest Client
+  desc: Der JiraRestClient ermöglicht einen einfachen Zugriff auf Jira über die REST-API innerhalb einer Java-Programmierung. Dabei werden die Responses in Java- Objekten gekapselt.
+  icon:
+  doc: baumeister

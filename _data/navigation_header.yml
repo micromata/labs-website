@@ -1,0 +1,59 @@
+# Navbar left menu navigation links
+
+# Navbar right menu navigation links
+
+right:
+  - title: Home
+    url: /
+
+  - title: Open Source
+    dropdown:
+
+      - title: Baumeister
+        url: /docs/baumeister/
+
+      - title: Check Packages
+        url: /docs/check-packages/
+
+      - title: Java API for KML
+        url: /docs/java-api-for-kml/
+
+      - title: ProjectForge
+        url: /docs/projectforge/
+
+      - title: Home Made Projects
+        url: /docs/home-made-projekte/
+
+  - title: Community
+    dropdown:
+
+      - title: JUGH
+        url: /community/jugh/
+
+      - title: Security Meetup Kassel
+        url: /community/sec-meetup-kassel/
+
+  - title: F & E
+    dropdown:
+
+      - title: ProFi
+        url: /f-und-e/profi/
+
+      - title: VAMINAP
+        url: /f-und-e/vaminap/
+
+  - title: Publikationen
+    dropdown:
+
+      - title: Micromata TV
+        url: /publikationen/micromata-tv/
+
+      - title: Awesome Lists
+        url: /publikationen/awesome-lists/
+
+  - title: Blog
+    url: /blog/
+
+
+
+

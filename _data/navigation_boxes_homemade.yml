@@ -1,0 +1,37 @@
+# Boxes include navigation
+
+- title: dt - the dev toolbelt
+  desc: The dev toolbelt is a fast and flexible tool to handle common use cases of your daily work. Use cases you generally use some online tools.
+  url: https://github.com/chclaus/dt
+
+- title: itunes-remote
+  desc: 🎶 Control iTunes via interactive CLI?  Durch den Technologie-Mix von JXA via osascript und Node.js ist es möglich iTunes zu bedienen ohne das Terminal verlassen zu müssen.
+  url: https://github.com/mischah/itunes-remote
+
+- title: Relaxed Themew
+  desc: 🕶️ A relaxed theme to take a more relaxed view of things. Available for Visual Studio Code, Atom, Terminal, iTerm, Hyper and a bunch of others.
+  url: https://github.com/Relaxed-Theme
+
+- title: array-smoosh
+  desc: Array.prototype.smoosh and smooshMap for all! Dieses kleine JavaScript Polyfill entstand im Rahmen des &#35;SmooshGate um die wunderbaren Methodennamen zu erhalten.
+  url: https://github.com/nicolaisueper/array-smoosh
+
+- title: Rickrollify
+  desc: A Chrome extension which rickrollifies every link on every website – Psst!
+  url: https://github.com/bullgit/Rickrollify
+
+- title: Greenfoot Generator
+  desc: This is a Yeoman generator that creates a basic Greenfoot application. This makes it possible to develop Greenfoot games with Maven/IntelliJ/Eclipse.
+  url: https://github.com/lfuelling/generator-greenfoot
+
+- title: lrkFM
+  desc: Awesome, (ad) free, open source file manager for Android with archive capability.
+  url: https://github.com/lfuelling/lrkFM
+
+- title: iBrew
+  desc: 🍻 Interactive CLI for Homebrew – the missing package manager for macOS. iBrew lets you use the Homebrew in a different (comfy) way.
+  url: https://github.com/mischah/ibrew
+
+- title:
+  desc:
+  url:

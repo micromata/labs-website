@@ -1,0 +1,160 @@
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog.
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
+
+# Site title and description
+title:              Micromata Labs
+description:        Home of Micromata Open Source Projects.
+lang:               de
+
+# Site subpath, e.g. /blog
+baseurl:            ""
+
+# Permalink URLs structure, for permalink style options see: https://jekyllrb.com/docs/permalinks/
+permalink:          /:title/
+
+# Site base hostname & protocol, e.g. http://example.com
+url:                ""
+
+# Site logo # e.g. logo.png, upload logo image file to /uploads/ folder
+logo:               signet-labs.svg
+
+navbar:
+    sticky:         true
+    search:         false
+  
+# Default author settings
+author:
+    name:           Michael Kühnel
+    title:          Frontend Developer
+    avatar:         avatar-mkuehnel.jpg
+
+# Author settings, displayed on post and doc pages if front matter references author name e.g. author: peter
+authors:
+  abestvater:
+    name:         Andy Bestvater
+    title:        Developer
+    avatar:       avatar-abestvater.jpg
+  atippel:
+    name:         André Tippel
+    title:        Developer
+    avatar:       avatar-default.jpg
+  cclaus:
+    name:         Christian Claus
+    title:        Developer
+    avatar:       avatar-cclaus.jpg
+  ckuehl:
+    name:         Christian Kühl
+    title:        Frontend Developer
+    avatar:       avatar-default.jpg
+    email:        ckuehl(at)micromata.de
+  dludwig:
+    name:         Daniel Ludwig
+    title:        Architect, Developer
+    avatar:       avatar-dludwig.jpg
+  mfroehner:
+    name:         Moritz Fröhner
+    title:        UX
+    avatar:       avatar-mfroehner.jpg
+  hthole:
+    name:         Hendrik Thole
+    title:        Projektmanager
+    avatar:       avatar-hthole.jpg
+  jfast:
+    name:         Jürgen Fast
+    title:        Developer
+    avatar:       avatar-jfast.jpg
+  kreinhard:
+    name:         Kai Reinhard
+    title:        Developer
+    avatar:       avatar-kreinhard.jpg
+  mkuehnel:
+    name:         Michael Kühnel
+    title:        Frontend Developer
+    shortdesc:    Michael ist seit Netscape 4.7.8 im Geschäft und freut sich, dass dank Webstandards seitdem alles besser wird. Folge Michael bei <a href="https://twitter.com/mkuehnel">Twitter</a> oder <a href="https://github.com/mischah">GitHub</a>.
+    avatar:       avatar-mkuehnel.jpg
+
+# Social icons displayed in footer
+social:
+    email:
+    website:        https://labs.micromata.de
+    facebook:
+    flickr:
+    dribbble:
+    github:         https://github.com/micromata/
+    googleplus:
+    instagram:      https://www.instagram.com/micromata/
+    linkedin:
+    pinterest:
+    twitter:        https://twitter.com/micromata
+    vimeo:          https://vimeo.com/user44553474
+    youtube:
+
+# Share button
+share:
+    post:           false # Display share buttons on a post page
+    doc:            false # Display share buttons on a doc page
+    twitter:        username # Enable by adding Twitter handle 
+    facebook:       false # Enable by setting true (Facebook handle not required)
+
+# Default footer image settings
+footer:
+    copyright:      <a href="https://micromata.de/">&copy; Micromata GmbH</a>
+
+# Disqus comments shortname, requires Disqus account https://disqus.com/
+disqus:
+    shortname:      # 1234
+
+# Google analytics code, get your code here https://www.google.com/analytics/
+google_analytics:
+
+# Number of posts displayed on blog page
+paginate:           10
+
+# Blog path
+paginate_path:      "/blog/:num/"
+
+# Path to post content assets directory i.e post images, pdfs etc
+uploads:            /uploads/
+
+# Build settings
+markdown:           kramdown
+highlighter:        rouge
+
+gems:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-gist
+  - jekyll-avatar
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+
+sass:
+  style:            compressed
+
+collections:
+  docs:
+    output:         true
+  faqs:
+    output:         false
+  changelogs:
+    output:         false
+
+# Defaults
+defaults:
+  # _posts
+  - scope:
+      path:         ""
+      type:         posts
+    values:
+      layout:       post
+  # _docs
+  - scope:
+      path:         ""
+      type:         docs
+    values:
+      layout:       doc

@@ -1,0 +1,10 @@
+# Add file names for sidebar navigation
+
+- title: Micromata Projekte
+  docs:
+  - baumeister
+  - check-packages
+  - java-api-for-kml
+  - projectforge
+  - home-made-projekte
+

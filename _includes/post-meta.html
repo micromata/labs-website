@@ -1,0 +1,36 @@
+{% if page.author %}
+  {% assign author = site.authors[page.author] %}
+{% endif %}
+
+{% if author.avatar %}
+  {% if author.avatar contains 'http' %}
+      {% assign domain = '' %}
+  {% else %}
+      {% assign domain = site.uploads | absolute_url %}
+  {% endif %}
+  <img class="uk-border-circle avatar" src="{{ domain }}{{ author.avatar }}" alt="{{ author.name }}">
+{% endif %}
+
+<div>
+  {% if author.name %}
+    <h5 itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ author.name }}</span></h5>
+  {% endif %}
+
+  {% if author.name == 'Michael Kühnel' %}
+    <p>{{ author.title }}</p>
+    <p>{{ author.shortdesc }}</p>
+    <p>{{ author.email }}<p>
+  {% endif %}
+
+  {% if author.name == 'Daniel Ludwig' %}
+    <p>{{ author.title }}</p>
+    <p>{{ author.shortdesc }}</p>
+    <p>{{ author.email }}<p>
+  {% endif %}
+
+  {% if author.name == 'Christian Kühl' %}
+    <p>{{ author.title }}</p>
+    <p>{{ author.shortdesc }}</p>
+    <p>{{ author.email }}<p>
+  {% endif %}
+</div>

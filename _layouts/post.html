@@ -1,0 +1,53 @@
+---
+layout: default
+---
+
+<div class="uk-section">
+    <div class="uk-container uk-container-small">
+        <article class="uk-article mm-blogpost">
+            
+            <span class="mm-featured-cat uk-text-center">{{ page.categories }}</span>
+
+            <h1 class="uk-article-title uk-text-center">{{ page.title | escape }}</h1>
+
+            <p class="uk-text-lead uk-text-center">{{ page.shortdesc | escape }}</h1>
+
+            <div class="uk-text-center">
+                <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
+                    {% assign date_format = site.date_format | default: "%d. %B, %Y" %}
+                    {{ page.date | date: date_format }}
+                </time>
+            </div>
+
+            <div class="article-content link-primary">
+                {{ content }}
+                {% if site.share.post %}
+                    {% include share.html %}
+                {% endif %}
+            </div>
+
+            <div class="uk-article-meta uk-margin-top uk-margin-medium-bottom uk-flex uk-flex-middle">
+                {% include author-meta.html %}
+            </div>
+
+            <hr class="uk-margin-medium">
+
+            {% include paginate-post.html %}
+
+            {% include related-posts.html %}
+
+            {% if site.disqus.shortname %}
+                {% include disqus_comments.html %}
+            {% endif %}
+        </article>
+
+        <script>
+            // Table of contents scroll to
+            UIkit.scroll('#markdown-toc a', {
+                duration: 400,
+                offset: 120
+            });
+        </script>
+
+    </div>
+</div>

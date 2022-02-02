@@ -1,0 +1,27 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+
+// System fonts
+@import "system-font-css/_system-font";
+
+// Custom variables and variable overwrites.
+@import "theme/variables";
+
+// Import default variables and available mixins.
+@import "uikit/variables-theme";
+@import "uikit/mixins-theme";
+
+// Custom mixin overwrites.
+@import "theme/mixins";
+
+// Import UIkit.
+@import "theme/uikit";
+
+// Other vendor styles
+// @import "syntax-highlighting/cld";
+@import "syntax-highlighting/bw";
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,500;0,600;0,700;1,500&display=swap');
+@import "theme/mm-labs";
+@import "theme/prism";

@@ -1,0 +1,27 @@
+<footer class="uk-section uk-text-muted">
+    <div class="uk-container">
+
+        <div class="uk-flex uk-flex-between">
+            <ul class="uk-subnav">
+                {% for link in site.data.navigation_footer %}
+                    {% if link.url contains 'http' %}
+                        {% assign domain = '' %}
+                    {% else %}
+                        {% assign domain = '' | relative_url %}
+                    {% endif %}
+                    {% if link.url == page.url %}
+                        {% assign current = ' class="uk-active"' %}
+                    {% else %}
+                        {% assign current = null %}
+                    {% endif %}
+                    {% if link.title %}
+                        <li{{ current }}><a href="{{ domain }}{{ link.url }}" {% if link.url contains 'http' %}target="_blank" {% endif %}>{{ link.title }}</a></li>
+                    {% endif %}
+                {% endfor %}
+            </ul>
+            <div data-uk-grid class="uk-child-width-auto uk-grid-small uk-grid">
+                {% include social-networks.html %}
+            </div>
+        </div>
+    </div>
+</footer>
