@@ -15,11 +15,32 @@ right:
       - title: Check Packages
         url: /docs/check-packages/
 
+      - title: CLI Error Notifier
+        url: /docs/cli-error-notifier/
+
+      - title: Dave
+        url: /docs/dave/
+
+      - title: GWiki
+        url: /docs/gwiki/
+
+      - title: HTTP Fake Backend
+        url: /docs/http-fake-backend/
+
+      - title: Hungry Fetch
+        url: /docs/hungry-fetch/
+
       - title: Java API for KML
         url: /docs/java-api-for-kml/
 
       - title: ProjectForge
         url: /docs/projectforge/
+
+      - title: Sawdust
+        url: /docs/sawdust/
+
+      - title: TPSB
+        url: /docs/tpsb/
 
       - title: Home Made Projects
         url: /docs/home-made-projekte/
