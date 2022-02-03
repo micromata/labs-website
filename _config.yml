@@ -75,6 +75,23 @@ authors:
     title:        Frontend Developer
     shortdesc:    Michael ist seit Netscape 4.7.8 im Geschäft und freut sich, dass dank Webstandards seitdem alles besser wird. Folge Michael bei <a href="https://twitter.com/mkuehnel">Twitter</a> oder <a href="https://github.com/mischah">GitHub</a>.
     avatar:       avatar-mkuehnel.jpg
+    email:        mkuehnel(at)micromata.de
+  pmandler:
+    name:         Philip Mandler
+    title:        Softwareentwickler
+    shortdesc:    
+    avatar:       avatar-default.jpg
+    email:        pmandler(at)micromata.de
+  cstein:
+    name:         Christian Stein
+    title:        Softwareentwickler
+    shortdesc:    
+    avatar:       avatar-default.jpg
+  rkommer:
+    name:         Roger René Kommer
+    title:        Softwareentwickler
+    shortdesc:    <p>Roger René Kommer vom Ingenieurbüro <em><strong>artefaktur</strong></em>, Architekt und Softwareentwickler, versteht sich als Generalist, der für jedes Projekt zum Spezialisten werden muss. Detail und Ganzes, Innen und Außen, Material und Form, Sprache und Ausdruck, Regel und Bruch, Anforderung und Kontext sind Spannungsfelder, in dem er Softwareentwicklung auch als kompositorische Herausforderung versteht.</p><p>Seit 20 Jahren ist Roger mit Micromata freundschaftlich verbunden, mit der er zusammen viele tolle Projekte durchgeführt hat.</p>
+    avatar:       avatar-default.jpg
 
 # Social icons displayed in footer
 social:
