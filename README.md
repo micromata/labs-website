@@ -74,31 +74,27 @@ bundle exec jekyll serve --livereload --trace
 
 ## Site structure
 
-|-- **commmunity**
-|   |-- *jugh.md*
-|   |-- *sec-meetup-kassel.md*
-|   |-- *etc.*
-| 
-| -- **f-und-e**
-|   |-- *profi.md*
-|   |-- *vaminap.md*
-|   |-- *etc.*
-| 
-| -- **_docs**
-|   |-- *baumeister.md*
-|   |-- *projektforge.md*
-|   |-- *java-api-for-kml.md*
-|   |-- etc
-| 
-| -- **publikationen**
-|   |-- *awesome-lists.md*
-|   |-- *micromata-tv.md*
-|   |-- *etc.*
-|
-| -- **_posts**
-|   |-- *2021-02-12-your-blog-post.md*
-|   |-- *2021-02-12-my-blog-post.md*
-|   |-- *etc.*
+- **commmunity**
+  - *jugh.md*
+  - *sec-meetup-kassel.md*
+  - *etc.*
+- **f-und-e**
+  - *profi.md*
+  - *vaminap.md*
+  - *etc.*
+- **_docs**
+  - *baumeister.md*
+  - *projektforge.md*
+  - *java-api-for-kml.md*
+  - *etc.*
+- **publikationen**
+  - *awesome-lists.md*
+  - *micromata-tv.md*
+  - *etc.*
+- **_posts**
+  - *2021-02-12-your-blog-post.md*
+  - *2021-02-12-my-blog-post.md*
+  - *etc.*
 
 ## Adding author details
 
@@ -164,17 +160,19 @@ To keep things more organized, add post images to `/assets/posts/` directory, an
 
 ## Creating a project article
 
-Create new project article (for Micromata Open Source projects) in `_docs` folder, similar to creating posts, but with following front matter settings (for example, the filename for the article would be `check-packages.md`):
+Step 1: Create new project article (for Micromata Open Source projects) in `_docs` folder, similar to creating posts, but with following front matter settings (for example, the filename for the article would be `check-packages.md`):
 
 ```yml
 ---
 title: Check Packages
 subtitle: This is your optional doc subtitle
-tags: [npm, node, cli] # Group similar topics; adds a list at page bottom
+image: logo-baumeister.jpg # Add your project logo or image at the top of the page (optional)
+tags: [npm, node, cli] # Group similar topics; adds a list of similar projects at page bottom (optional)
 author: ckuehl
 ---
 ```
-Header navigation on project posts can be edited in `_data/navigation_header.yml`:
+Step 2: Add your new document title to the header navigation.
+Header navigation for project posts can be edited in `_data/navigation_header.yml`:
 
 ```yml
 - title: Open Source
@@ -193,7 +191,8 @@ Header navigation on project posts can be edited in `_data/navigation_header.yml
         url: /docs/home-made-projekte/
 ```
 
-Sidebar navigation on project post can be edited in `_data/navigation_docs.yml`:
+Step 3: Add your new document title to the sidebar navigation.
+Sidebar navigation for project post can be edited in `_data/navigation_docs.yml`:
 
 ```yml
 - title: Micromata Projekte # Section title
