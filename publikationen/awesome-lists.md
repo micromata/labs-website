@@ -5,7 +5,9 @@ hero:
     title: Awesome Lists
     subtitle: Awesome lists sind für uns eine hervorragende Möglichkeit, sich zu  bestimmten Themen einen Überblick über die besten Ressourcen zu  verschaffen.
     image: logo-awesome.png
+author:
 permalink: /publikationen/awesome-lists/
+scope: [Publikationen]
 ---
 
 Es handelt sich hierbei um gut strukturierte monothematische Listen  mit kommentierten Links, die auf GitHub zur gemeinsamen Verbesserung und Aktualisierung bereitgestellt werden.

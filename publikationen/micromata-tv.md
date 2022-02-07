@@ -4,7 +4,10 @@ width: small
 hero:
     title: Micromata TV
     subtitle: Mit Micromata TV auf YouTube wollen wir Themen mit euch teilen, die nicht nur für uns, sondern im allgemeinen für eine intelligente Software-Entwicklung relevant und von Belang sind. Wir legen großen Wert auf einen lebhaften Know-how-Transfer und freuen uns natürlich darüber, mit euch ins Gespräch zu kommen.
+    image:
+author:
 permalink: /publikationen/micromata-tv/
+scope: [Publikationen]
 ---
 
 

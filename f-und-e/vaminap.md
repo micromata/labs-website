@@ -7,6 +7,7 @@ hero:
     image: vaminap.jpg
 author: hthole
 permalink: /f-und-e/vaminap/
+scope: [F & E]
 ---
 
 **Herausforderung:** Ziel ist es, Klärwerke bei der  Beseitigung von kleinsten Schadstoffen zu unterstützen. Denn toxische  Rückstände belasten zunehmend unseren Wasserkreislauf und stellen für  Mensch und Umwelt eine ernstzunehmende Gefahr dar. Die Anreicherung  insbesondere von pharmazeutischen Substanzen und Kunststoffen im  Trinkwasser bringt erhebliche Gefahren für die gesamte Nahrungskette mit sich. Bisher mangelt es allerdings an einfach zu bedienenden  Analysegeräten, mit denen Mitarbeiter von Kläranlagen vor Ort schnell  und dennoch mit hoher Empfindlichkeit Belastungen auslesen können allen  voran schwer zu detektierende Stoffe wie Nanopartikel, Mikroplastikteile und Rückstände aus Arzneimitteln.

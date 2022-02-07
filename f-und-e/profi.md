@@ -6,6 +6,7 @@ hero:
     image: logo-profi.png
 author: mfroehner
 permalink: /f-und-e/profi/
+scope: [F & E]
 ---
 
 Ziel dieses BMFB-geförderten Projektes ist es, durch systematisches  Prototyping einen kosteneffizienten und risikominimierenden Schlüssel  zur Innovation zu schaffen. Folgende Ergebnisse sollen dies ermöglichen:
