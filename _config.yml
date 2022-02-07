@@ -27,9 +27,9 @@ navbar:
   
 # Default author settings
 author:
-    name:           Michael Kühnel
-    title:          Frontend Developer
-    avatar:         avatar-mkuehnel.jpg
+    name:          Admin
+    title:         
+    avatar:        avatar-default.jpg
 
 # Author settings, displayed on post and doc pages if front matter references author name e.g. author: peter
 authors:
@@ -94,6 +94,12 @@ authors:
     title:        Softwareentwickler
     shortdesc:    <p>Roger René Kommer vom Ingenieurbüro <em><strong>artefaktur</strong></em>, Architekt und Softwareentwickler, versteht sich als Generalist, der für jedes Projekt zum Spezialisten werden muss. Detail und Ganzes, Innen und Außen, Material und Form, Sprache und Ausdruck, Regel und Bruch, Anforderung und Kontext sind Spannungsfelder, in dem er Softwareentwicklung auch als kompositorische Herausforderung versteht.</p><p>Seit 20 Jahren ist Roger mit Micromata freundschaftlich verbunden, mit der er zusammen viele tolle Projekte durchgeführt hat.</p>
     avatar:       avatar-default.jpg
+  nmollenhauer:
+    name:         Niklas Mollenhauer
+    title:        Full-Stack-Entwickler mit Leidenschaft für API-, DX- und Language-Design.
+    shortdesc:    Folge Niklas auf <a href="https://github.com/nikeee">GitHub</a>.
+    avatar:       avatar-default.jpg
+    email:        nmollenhauer(at)micromata.de
 
 # Social icons displayed in footer
 social:
