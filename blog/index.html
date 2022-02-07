@@ -41,7 +41,7 @@ title: Blog
                 </div>
             </div>
             <div class="uk-card-body">
-                {{ post.excerpt }}
+                {{ post.content | truncatewords: 50 }}
             </div>
             <div class="uk-card-footer">
                 <span class="uk-button uk-button-text">{{ site.data.translation[site.lang].read_more | default: "Mehr lesen" }} &rarr;</span>
