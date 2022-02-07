@@ -64,8 +64,10 @@ authors:
     avatar:       avatar-hthole.jpg
   jfast:
     name:         Jürgen Fast
-    title:        Developer
+    title:        Softwareentwickler
+    shortdesc:    Jürgen Fast arbeitet seit 2014 bei der Micromata GmbH als Softwareentwickler in verschiedenen Projekten der Logistik- und Automobilbranche. Sein Schwerpunkt liegt in der Entwicklung von javabasierten Webapplikationen.
     avatar:       avatar-jfast.jpg
+    email:        jfast(at)micromata.de
   kreinhard:
     name:         Kai Reinhard
     title:        Developer
