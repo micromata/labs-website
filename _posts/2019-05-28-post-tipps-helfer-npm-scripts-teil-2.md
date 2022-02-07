@@ -4,10 +4,11 @@ author: mkuehnel
 categories: [Best Practices]
 tags: [npm]
 shortdesc: Weitere Möglichkeiten zur Verbesserung eures Frontend Build-Setups.
+permalink: /blog/2019-05-28-post-tipps-helfer-npm-scripts-teil-2/
 featured: true
 ---
 
-Im ersten Teil [Link](https://labs.micromata.de/best-practices/tipps-und-helfer-fuer-npm-run-scripts-teil-1/) dieses zweiteiligen Artikels zum Thema npm Scripts ging es darum was  ihr mit vielleicht weniger bekannten Bordmitteln die npm mitliefert  erreichen könnt. Im heutigen, abschließenden Teil wollen wir third party Tools aus dem npm Ökösystem unter die Lupe nehmen, die das Potential  haben euch das Leben noch weiter zu vereinfachen.
+Im [ersten Teil](/blog/2019-04-10-post-tipps-helfer-npm-run-scripts-teil-1/) dieses zweiteiligen Artikels zum Thema npm Scripts ging es darum was  ihr mit vielleicht weniger bekannten Bordmitteln die npm mitliefert  erreichen könnt. Im heutigen, abschließenden Teil wollen wir third party Tools aus dem npm Ökösystem unter die Lupe nehmen, die das Potential  haben euch das Leben noch weiter zu vereinfachen.
 
 ## Watch files
 

@@ -4,10 +4,12 @@ author: cclaus
 categories: [Quick Tips]
 tags: [maven]
 shortdesc: Mit GoogleContainerTools zum Docker Image 
-featured: true
+featured: false
 ---
 
-Wer kennt es nicht, ein neues Projekt steht an. Voller Tatendrang  legen wir los mit dem Projekt-Setup. Welche Sprache nehmen wir? Ein  kurzes Quiz im Chat und das Team ist sich einig: Es wird Kotlin. Schön!  Jetzt noch die neusten Version von unserem Lieblingsframeworks mit in  die Maven POM aufgenommen. Frontend Build Prozess skizziert und nicht zu vergessen unsere Test-Suite. Last but not least denken wir daran, dass  die App am Ende in Form eines Docker-Images aus der CI/CD Pipeline  purzeln soll. Aber wie gehen wir das am besten an?
+Wer kennt es nicht, ein neues Projekt steht an. Voller Tatendrang  legen wir los mit dem Projekt-Setup. Welche Sprache nehmen wir? Ein  kurzes Quiz im Chat und das Team ist sich einig: Es wird Kotlin. Schön!
+
+Jetzt noch die neusten Version von unserem Lieblingsframeworks mit in  die Maven POM aufgenommen. Frontend Build Prozess skizziert und nicht zu vergessen unsere Test-Suite. Last but not least denken wir daran, dass  die App am Ende in Form eines Docker-Images aus der CI/CD Pipeline  purzeln soll. Aber wie gehen wir das am besten an?
 
 - Eigene Dockerfile schreiben?
 - Das [Spring-Boot Maven Plugin](https://docs.spring.io/spring-boot/docs/current/maven-plugin/reference/htmlsingle/#goals-build-image) zum Bauen von Docker Images nutzen?

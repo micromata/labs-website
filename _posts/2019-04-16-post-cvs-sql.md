@@ -4,7 +4,7 @@ author: cclaus
 categories: [Quick Tips]
 tags: [cli, sql]
 shortdesc: Ein nettes, kleines Tool, um auf der Kommandozeile mit SQL-Abfragen CSV-Dateien zu durchforsten
-featured: true
+featured: false
 ---
 
 Ich habe neulich ein Werkzeug gebraucht um ein paar Informationen aus einer CSV-Datei zu ziehen. Dabei bin ich über ein nettes kleines  CLI-Tool namens [textql](https://github.com/dinedal/textql) gestolpert. Mit textql kann man auf CSV-Dateien mit SQL-Operationen arbeiten. Und so gehts:

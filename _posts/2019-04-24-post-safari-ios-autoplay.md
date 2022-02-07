@@ -4,7 +4,7 @@ author: abestvater
 categories: [Quick Tips]
 tags: [ios]
 shortdesc: Wie WebKit mit Videos und autoplay umgeht.
-featured: true
+featured: false
 ---
 
 Hin und wieder möchte man ein Video im HTML einbinden und es  abspielen lassen ohne das der Benutzer es explizit startet. Verschiedene Browser haben diesbezüglich – dankenswerter Weise – gewisse  Einschränkungen. Es gibt jedoch Use Cases in denen es durchaus valide  ist diese Einschränkungen zu umgehen. Beispielsweise Animationen.
