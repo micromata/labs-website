@@ -6,6 +6,7 @@ hero:
     subtitle: Gegründet für Kassel im März 2016 bietet der Security-Meetup persönliche Treffen und Austausch für alle Interessierten zum Thema Security direkt in Kassel.
     image: logo-sec-meetup.png
 permalink: /community/sec-meetup-kassel/
+scope: [Community]
 ---
 
 Die Themen der Treffen drehen sich um:

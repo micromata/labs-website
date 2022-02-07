@@ -6,6 +6,7 @@ hero:
     subtitle: Die Java User Group Hessen (JUGH) ist Teil des internationalen Netzwerkes von Java Communities, die sich der weltweiten Verbreitung von Java-Know-how verschrieben haben.
     image: logo-jugh.png
 permalink: /community/jugh/
+scope: [Community]
 ---
 
 JUGH wurde 2009 von Micromata gegründet und wird seither von uns betreut. Schau doch mal auf unserem Meetup-Space vorbei.
