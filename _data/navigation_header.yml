@@ -33,6 +33,9 @@ right:
       - title: Java API for KML
         url: /docs/java-api-for-kml/
 
+      - title: JIRARestClient
+        url: /docs/jira-rest-client/
+
       - title: ProjectForge
         url: /docs/projectforge/
 
@@ -48,11 +51,14 @@ right:
   - title: Community
     dropdown:
 
-      - title: JUGH
-        url: /community/jugh/
-
       - title: Security Meetup Kassel
         url: /community/sec-meetup-kassel/
+
+      - title: Web Montag
+        url: /community/webmontag/
+
+      - title: JUGH (Java User Group Hessen)
+        url: /community/jugh/
 
   - title: F & E
     dropdown:
@@ -71,6 +77,9 @@ right:
 
       - title: Awesome Lists
         url: /publikationen/awesome-lists/
+
+      - title: Tutorial Spring Security
+        url: /publikationen/tutorial-spring-security/
 
   - title: Blog
     url: /blog/
