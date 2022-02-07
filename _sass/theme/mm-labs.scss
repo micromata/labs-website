@@ -32,6 +32,25 @@ article .uk-link,
   }
 }
 
+.uk-button.uk-button-default {
+  display: inline-block;
+  margin-bottom: 0;
+  font-weight: 600;
+  padding: 14px 20px;
+  font-size: 18px;
+  line-height: 1.6;
+  border-radius: 4px;
+  color: #50a53c;
+  background-color: transparent;
+  border-color: #479235;
+
+  &:hover {
+    background:#50a53c;
+    color: #fff;
+  }
+}
+
+
 a.hvr-forward,
 a.hvr-back {
   font-size: 16px;
@@ -40,6 +59,10 @@ a.hvr-back {
 .uk-list.link-secondary {
   font-size: 16px;
   margin-top: 5px;
+}
+
+em {
+  color: #333;
 }
 
 // Navbar
@@ -86,7 +109,10 @@ a.hvr-back {
 }
 
 // Footer
-footer {
+footer.uk-section {
+  border-top: 1px solid #ccc;
+  padding: 30px 0;
+
   .uk-subnav > * {
     line-height: 2.1;
 
@@ -339,4 +365,11 @@ a.uk-button.uk-button-primary-outline {
 
 pre.highlight {
   background:#272822;
+}
+
+// Boxes
+
+img.mm-boxLogo {
+  max-height: 80px;
+  margin-bottom: 30px;
 }
