@@ -20,8 +20,8 @@ en:
   contact_send:               "Send"
 
 de:
-  previous:                   "Zurück"
-  next:                       "Weiter"
+  previous:                   "Vorheriger Artikel"
+  next:                       "Nächster Artikel"
   related_docs:               "Verwandte Projekte"
   related_posts:              "Verwandte Artikel"
   read_more:                  "Mehr lesen"
