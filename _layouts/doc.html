@@ -27,7 +27,7 @@ layout: default
 
                     <h1 class="uk-article-title uk-text-center">{{ page.title | escape }}</h1>
 
-                    {% if page.subtitle %}<p class="uk-text-lead uk-text-muted uk-text-center">{{ page.subtitle }}</p>{% endif %}
+                    {% if page.subtitle %}<p class="uk-text-lead uk-text-center">{{ page.subtitle }}</p>{% endif %}
 
                     {% if page.image %}
                     <p class="hero-image uk-text-center" data-uk-scrollspy="cls: uk-animation-slide-bottom-medium; repeat: true"><img src="{{ site.uploads | absolute_url }}{{ page.image }}" alt="Hero"></p>
@@ -40,17 +40,17 @@ layout: default
                         {% endif %}
                     </div>
 
-                    <div class="uk-article-meta uk-margin-medium-bottom uk-flex uk-flex-middle">
+                    <div class="uk-article-meta uk-margin-medium-top uk-margin-medium-bottom uk-flex uk-flex-middle">
                         {% include author-meta.html %}
                     </div>
 
                     {% include hook-post-content-doc.html %}
 
-                    <hr class="uk-margin-medium">
+                    <!-- <hr class="uk-margin-medium"> -->
 
-                    {% include paginate-doc.html %}
+                    <!-- {% include paginate-doc.html %} -->
 
-                    {% include related-docs.html %}
+                    <!-- {% include related-docs.html %} -->
 
                     {% if site.disqus.shortname %}
                         {% include disqus_comments.html %}

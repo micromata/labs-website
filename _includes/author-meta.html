@@ -14,8 +14,8 @@
 <div>
   {% if author.name %}
     <h5 itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ author.name }}</span></h5>
-    <p>{{ author.title }}</p>
-    <p>{{ author.shortdesc }}</p>
-    <p class="email">{{ author.email }}<p>
+    <p class="author-title">{{ author.title }}</p>
+    <p class="author-shortdesc">{{ author.shortdesc }}</p>
+    <p class="author-email">{{ author.email }}<p>
   {% endif %}
 </div>
