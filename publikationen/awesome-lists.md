@@ -16,7 +16,7 @@ Das Spektrum an Themen, zu denen es Awesome lists gibt, ist groß: Es  gibt List
 
 Der wichtigste Punkt bei diesen Listen: Es sind nicht nur  Linksammlungen, die einen mit Links erschlagen, sondern es sind  sorgfältig kuratierte Listen limitiert auf die besten Ressourcen, sofern sie nach dem [The awesome manifesto](https://github.com/sindresorhus/awesome/blob/master/awesome.md) erstellt und geführt werden. Diese Listen können einem also wirklich Zeit in der Recherche zu einem bestimmten Thema ersparen.
 
-Die Awesome List Bewegung wurde auf GitHub von Sindre Sorhus mitinitiiert, geprägt und nach vorne getrieben. Er unterhält unter https://github.com/sindresorhus/awesome die bedeutsamste Awesome List über Awesome Lists – hier kommen nur die  besten Listen rein, die dem awesome Manifesto entsprechen.
+Die Awesome List Bewegung wurde auf GitHub von Sindre Sorhus mitinitiiert, geprägt und nach vorne getrieben. Er unterhält unter [https://github.com/sindresorhus/awesome](https://github.com/sindresorhus/awesome) die bedeutsamste Awesome List über Awesome Lists – hier kommen nur die  besten Listen rein, die dem awesome Manifesto entsprechen.
 
 Micromatas Beitrag zur Awesome list community:
 

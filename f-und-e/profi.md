@@ -2,7 +2,7 @@
 layout: page
 width: small
 hero:
-    title: ProFi
+    title: ProFi - Prototyping For Innovation
     image: logo-profi.png
 author: mfroehner
 permalink: /f-und-e/profi/
@@ -17,4 +17,4 @@ Ziel dieses BMFB-geförderten Projektes ist es, durch systematisches  Prototypin
 
 - Prototyping Werkzeuge zu aktuellen Technologien (IoT, AR/VR,  Web-Apps), die in einem gemeinsamen Framework verankert werden, das die  Konzeption neuer Services ermöglicht.
 
-Weitere Informationen zu diesem Forschungsprojekt finden sie auf der [ProFI-Webseite](http://prototyping4innovation.de).
+Weitere Informationen zu diesem Forschungsprojekt finden Sie auf der [ProFI-Webseite](http://prototyping4innovation.de).

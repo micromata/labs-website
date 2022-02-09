@@ -11,6 +11,17 @@ scope: [Community]
 
 Die Themen der Treffen drehen sich um:
 
-Internetsicherheit · Netzwerksicherheit · Informationssicherheit · Application Security · Software Security · Ethical Hacker · Sicherheit in der  Cloud · Computersicherheit · Penetration Testing · Cybersecurity · Web  Application Security
+- Internetsicherheit
+- Netzwerksicherheit
+- Informationssicherheit
+- Application Security
+- Software Security
+- Ethical Hacker
+- Sicherheit in der  Cloud 
+- Computersicherheit
+- Penetration Testing
+- Cybersecurity
+- Web  Application Security
 
 Der Security-Meetup findet unter anderem in der Micromata statt. Für  weitere Informationen zu Terminen und Vorträgen schaut ihr am besten  direkt auf der [Homepage](http://www.meetup.com/de-DE/IT-Security-Kassel-und-Nordhessen/#upcoming) nach
+
