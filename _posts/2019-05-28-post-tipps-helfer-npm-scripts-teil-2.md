@@ -92,8 +92,8 @@ Die Verwendung von [npm-run-all](https://github.com/mysticatea/npm-run-all) biet
 
 Abhängig von der Anzahl an Tasks kann es schwer sein sich jeden einzelnen Task Namen zu merken. Eine besserer Alternative zu `npm run` zum Auflisten der verfügbaren Tasks ist ein kleines Tools Namens [ntl](https://github.com/ruyadorno/ntl). Dieses zeigt eine interaktive Liste der npm Scripts durch die man mit der Tastatur scrollen und auswählen kann 💥
 
-![img](https://labs.micromata.de/wp-content/uploads/2019/05/ntl.png)
 
+![ntl](/uploads/posts/ntl.png)
 
 
 ## Beyond npm Scripts

@@ -18,7 +18,7 @@ Eine minimale aber komplette Beispielapplikation findet sich auf [GitHub](https:
 
 Bevor ich mit der Erklärung zur Implementierung loslege, zeige ich  zunächst anhand eines kleinen Beispiels, dass sich dieser — in den  meisten Fällen — kleine Umbau wirklich lohnt. In unserem Demo-Szenario  wollen wir eine minimale Spring-Applikation deployen, d.h. keine  Controller, Views, etc. Entsprechend schlank ist der dependency-Baum in  der pom.xml:
 
-```bash
+```xml
 <dependencies>
   <dependency>
     <groupId>org.springframework.boot</groupId>
@@ -73,7 +73,7 @@ Statt **8 MB** werden hier also nur ca. **5 KB** pro Upload hochgeladen!
 
 Der vorgestellte Ansatz hat den Charme, dass nur kleine Umbauten im  Dockerfile und in der pom.xml notwendig sind. Beim Maven-Build muss das  paketierte JAR über das maven-dependency-plugin wieder passend  ausgepackt werden:
 
-```markup
+```xml
 <plugin>
   <groupId>org.apache.maven.plugins</groupId>
   <artifactId>maven-dependency-plugin</artifactId>

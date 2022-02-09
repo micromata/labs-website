@@ -117,4 +117,8 @@ async function myFunction() {
 
 Die Klassen `AbortController` und `AbortSignal` existieren schon länger und können [in folgenden Browsern](https://caniuse.com/abortcontroller) verwendet werden:
 
-![AbortController & AbortSignal auf caniuse.com](https://labs.micromata.de/wp-content/uploads/2022/02/caniuse-abortcontroller-1.png)AbortController & AbortSignal auf [caniuse.com](https://caniuse.com/abortcontroller)
+![AbortController & AbortSignal auf caniuse.com](/uploads/posts/caniuse-abortcontroller.png)
+*AbortController & AbortSignal auf <a href="https://caniuse.com/abortcontroller">canisuse.com</a>*
+
+
+

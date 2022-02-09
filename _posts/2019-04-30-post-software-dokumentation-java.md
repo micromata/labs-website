@@ -42,51 +42,51 @@ projekt-ordner
 In unserer pom.xml integrieren wir nun das jbake-maven-plugin in der build-Sektion und definieren die zwei Properties `my.jbake.in` und `my.jbake.out`. Dort definieren wir den Quell- und den Zielordner für unseren „Bäcker“.
 
 ```xml
-    <properties>
-        <my.jbake.in>${project.basedir}/src/documentation</my.jbake.in>
-        <my.jbake.out>${project.basedir}/target/documentation</my.jbake.out>
-    </properties>
+<properties>
+    <my.jbake.in>${project.basedir}/src/documentation</my.jbake.in>
+    <my.jbake.out>${project.basedir}/target/documentation</my.jbake.out>
+</properties>
 
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>org.jbake</groupId>
-                <artifactId>jbake-maven-plugin</artifactId>
-                <version>0.3.1</version>
-                <executions>
-                    <execution>
-                        <id>default-generate</id>
-                        <phase>generate-resources</phase>
-                        <goals>
-                            <goal>generate</goal>
-                        </goals>
-                    </execution>
-                </executions>
-                <configuration>
-                    <inputDirectory>${my.jbake.in}</inputDirectory>
-                    <outputDirectory>${my.jbake.out}</outputDirectory>
-                </configuration>
-                <dependencies>
-                    <!-- for freemarker templates (.ftl) -->
-                    <dependency>
-                        <groupId>org.freemarker</groupId>
-                        <artifactId>freemarker</artifactId>
-                        <version>2.3.28</version>
-                    </dependency>
-                    <dependency>
-                        <groupId>com.vladsch.flexmark</groupId>
-                        <artifactId>flexmark-all</artifactId>
-                        <version>0.34.48</version>
-                    </dependency>
-                    <dependency>
-                        <groupId>org.asciidoctor</groupId>
-                        <artifactId>asciidoctorj</artifactId>
-                        <version>1.5.7</version>
-                    </dependency>
-                </dependencies>
-            </plugin>
-        </plugins>
-    </build>
+<build>
+    <plugins>
+        <plugin>
+            <groupId>org.jbake</groupId>
+            <artifactId>jbake-maven-plugin</artifactId>
+            <version>0.3.1</version>
+            <executions>
+                <execution>
+                    <id>default-generate</id>
+                    <phase>generate-resources</phase>
+                    <goals>
+                        <goal>generate</goal>
+                    </goals>
+                </execution>
+            </executions>
+            <configuration>
+                <inputDirectory>${my.jbake.in}</inputDirectory>
+                <outputDirectory>${my.jbake.out}</outputDirectory>
+            </configuration>
+            <dependencies>
+                <!-- for freemarker templates (.ftl) -->
+                <dependency>
+                    <groupId>org.freemarker</groupId>
+                    <artifactId>freemarker</artifactId>
+                    <version>2.3.28</version>
+                </dependency>
+                <dependency>
+                    <groupId>com.vladsch.flexmark</groupId>
+                    <artifactId>flexmark-all</artifactId>
+                    <version>0.34.48</version>
+                </dependency>
+                <dependency>
+                    <groupId>org.asciidoctor</groupId>
+                    <artifactId>asciidoctorj</artifactId>
+                    <version>1.5.7</version>
+                </dependency>
+            </dependencies>
+        </plugin>
+    </plugins>
+</build>
 ```
 
 Um ein vorgefertigtes JBake Template zu verwenden und unseren  „documentation“ Ordner damit zu initialisieren wechseln wir auf der  Kommandozeile in den „projekt-ordner“ und führen folgendes Kommando aus.

@@ -2,7 +2,7 @@
 title: JIRARestClient
 subtitle: Mit Hilfe des JiraRestClient kann 체ber die REST-API V2 auf die Plattform Jira von Atlassian direkt zugegriffen werden.
 tags: [jira, rest, api]
-author:
+author: cschulze
 ---
 
 Dabei werden die Responses in Java-Objekten gekapselt, so dass ein Zugriff 체ber die REST-API innerhalb einer Java-Programmierung  vereinfacht wird.
@@ -30,7 +30,4 @@ Motivation des Projektes ist, eine Bibliothek zur Verf체gung zu haben, mit der �
 
 **Weiteres**
  Es existiert im Micromata GitHub Space ebenfalls einen Client um auf die [REST-Api eines Confluence](https://github.com/micromata/ConfluenceRestClient) zuzugreifen. Dieser Client funktioniert 채hnlich wie der JiraRestClient.
-
-**Ansprechpartner**:
- Christian Schulze arbeitet seit 2008 bei der Micromata. Zu Beginn  als Werkstudent und ab 2011 als Softwareentwickler f체r verschiedene  Projekte im Bereich Bergbau, Gashandel, Automobilbranche und Forschung.  Sein Schwerpunkt liegt in der Entwicklung von javabasierten  Webapplikationen und der Frontendentwicklung.
 

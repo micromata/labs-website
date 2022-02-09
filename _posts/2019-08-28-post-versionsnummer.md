@@ -65,33 +65,33 @@ Unser Java-Template platzieren wir nun in einem Verzeichnis `src/main/java-templ
 Unsere Template-Klasse kann dann wie folgt aussehen:
 
 ```java
- package de.micromata.sysinfo;
+package de.micromata.sysinfo;
  
- public final class Version {
-    public static final String VERSION = "${project.version}";
- }
+public final class Version {
+	public static final String VERSION = "${project.version}";
+}
 ```
 
 Um die Versionsnummer zu verwenden, können wir uns noch eine `SysInfo` Klasse erstellen. Die Klasse platzieren wir aber nicht im Java-Template Verzeichnis, sondern im eigentlichen Java Verzeichnis `src/main/java/[package Verzeichnis(se)]/SystemInfo.java`.
 
 ```java
 package de.micromata.sysinfo;
- 
- public class SystemInfo {
-     public static String getVersion() {
-         return Version.VERSION;
-     }
- }
+
+public class SystemInfo {
+	public static String getVersion() {
+		return Version.VERSION;
+	}
+}
 ```
 
 Bauen wir nun unsere Anwendung mit `mvn clean install` und untersuchen dann das `target` Verzeichnis, entdecken wir ein Verzeichnis `java-templates/[package Verzeichnis(se)]` welches unsere Pre-Kompilierte Template-Klasse `Version` enthält.
 
 ```java
- package de.micromata.sysinfo;
- 
- public final class Version {
-     public static final String VERSION = "1.0-SNAPSHOT";
- }
+package de.micromata.sysinfo;
+
+public final class Version {
+    public static final String VERSION = "1.0-SNAPSHOT";
+}
 ```
 
 Damit haben wir nun also unsere Versionsnummer aus der pom.xml immer  als Konstante im Quellcode vorliegen und können sie verwenden.
@@ -103,63 +103,62 @@ Deswegen müssen wir noch etwas nachlegen und eine sogenannte  Build-Nummer einf
 Dafür greifen wir auf das `buildnumber-maven-plugin` zurück und konfigurieren es so, dass es uns einen Zeitstempel als Build-Nummer erzeugt:
 
 ```xml
-  <build>
-         <plugins>
-             ...
-             <plugin>
-                 <groupId>org.codehaus.mojo</groupId>
-                 <artifactId>buildnumber-maven-plugin</artifactId>
-                 <version>1.4</version>
-                 <configuration>
-                     <revisionOnScmFailure>no.scm.config.in.pom</revisionOnScmFailure>
-                 </configuration>
-                 <executions>
-                     <execution>
-                         <phase>validate</phase>
-                         <goals>
-                             <goal>create-timestamp</goal>
-                         </goals>
-                         <configuration>
-                             <timestampFormat>yyyy-MM-dd HH:mm:ss.S</timestampFormat>
-                             <timestampPropertyName>buildnumber</timestampPropertyName>
-                         </configuration>
-                     </execution>
-                 </executions>
-             </plugin>
-             ...
-         </plugins>
-     </build>
-     ...
+<build>
+    <plugins>
+        ...
+        <plugin>
+            <groupId>org.codehaus.mojo</groupId>
+            <artifactId>buildnumber-maven-plugin</artifactId>
+            <version>1.4</version>
+            <configuration>
+                <revisionOnScmFailure>no.scm.config.in.pom</revisionOnScmFailure>
+            </configuration>
+            <executions>
+                <execution>
+                    <phase>validate</phase>
+                    <goals>
+                        <goal>create-timestamp</goal>
+                    </goals>
+                    <configuration>
+                        <timestampFormat>yyyy-MM-dd HH:mm:ss.S</timestampFormat>
+                        <timestampPropertyName>buildnumber</timestampPropertyName>
+                    </configuration>
+                </execution>
+            </executions>
+        </plugin>
+        ...
+    </plugins>
+</build>
+...
 ```
 
 Der Name der Property ist wie oben definiert `buildnumber`. Nun können wir unser Java-Template einfach erweitern:
 
 ```java
- package de.micromata.sysinfo;
- 
- public final class Version {
- 
-     public static final String VERSION = "${org.datenmuehle.sysinfo.version}";
-     public static final String BUILD   = "${buildnumber}";
- }
+package de.micromata.sysinfo;
+
+public final class Version {
+
+    public static final String VERSION = "${org.datenmuehle.sysinfo.version}";
+    public static final String BUILD   = "${buildnumber}";
+}
 ```
 
 Anschließend fügen wir in unserer SysInfo-Klasse einen neuen getter für die Build-Nummer hinzu:
 
 ```java
- package de.micromata.sysinfo;
- 
+package de.micromata.sysinfo;
 
- public class SystemInfo {
-     public static String getVersion() {
-         return Version.VERSION;
-     }
- 
-     public static String getBuild()
-     {
-         return Version.BUILD;
-     }
- }
+public class SystemInfo {
+    public static String getVersion() {
+        return Version.VERSION;
+    }
+
+    public static String getBuild()
+    {
+        return Version.BUILD;
+    }
+}
 ```
 
 Bauen wir nun unser Projekt wird `Version.BUILD` einen Zeitstempel ähnlich wie diesen `2019-08-25 19:12:40.992` enthalten.

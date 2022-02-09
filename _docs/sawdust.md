@@ -32,5 +32,5 @@ Alle Bestandteile der von uns entwickelten Komponenten sind unter der MIT Lizenz
 
 ### Sourcecode-Ablage
 
-[Sawdust auf GitHUb](https://github.com/micromata/sawdust)
+[Sawdust auf GitHub](https://github.com/micromata/sawdust)
 
