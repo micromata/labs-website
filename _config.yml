@@ -89,6 +89,11 @@ authors:
     title:        Softwareentwickler
     shortdesc:    
     avatar:       avatar-default.jpg
+  cschulze:
+    name:         Christian Schulze
+    title:        Softwareentwickler
+    avatar:       avatar-default.jpg
+    shortdesc:    Christian Schulze arbeitet seit 2008 bei der Micromata. Zu Beginn als Werkstudent und ab 2011 als Softwareentwickler für verschiedene Projekte im Bereich Bergbau, Gashandel, Automobilbranche und Forschung. Sein Schwerpunkt liegt in der Entwicklung von javabasierten Webapplikationen und der Frontendentwicklung.
   rkommer:
     name:         Roger René Kommer
     title:        Softwareentwickler
