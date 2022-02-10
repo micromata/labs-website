@@ -19,7 +19,22 @@ body {
 	width: 300px;
 }
 
+footer,
+nav {
+	.uk-container {
+		max-width: 100% !important;
+	}
+}
+
+.uk-subnav {
+	margin-bottom: 0;
+}
+
 // Typo etc.
+
+h1, .h2, .h3, .h4, h1, h2, h3, h4 {
+  color: #414650;
+}
 
 article a,
 article .uk-link,
@@ -121,7 +136,7 @@ img + em {
 
 // Footer
 footer.uk-section {
-	border-top: 1px solid #ccc;
+	border-top: 1px solid #E3E5E3;
 	padding: 30px 0;
 
 	.uk-subnav > * {
@@ -135,8 +150,12 @@ footer.uk-section {
 	svg {
 		width: 30px;
 		height: 30px;
-		fill: #000;
+		fill: #c00;
 		opacity: 0.7;
+
+		&:hover {
+			fill: #666;
+		}
 	}
 }
 
@@ -273,8 +292,9 @@ table {
 	}
 }
 
-.uk-icon-link {
-	//color: #686a75;
+footer.uk-section svg{
+	fill: #9A9DA3;
+	opacity: 1;
 }
 
 // Hero
@@ -313,11 +333,11 @@ p.hero-image {
 
 span.mm-featured-cat {
 	text-transform: uppercase;
-	font-size: 12px;
+	font-size: 14px;
 	font-weight: 700;
 	display: block;
-	color: #50A53C;
-	margin-bottom: 10px;
+	color: #757575;
+	margin-bottom: 30px;
 }
 
 // Docs
@@ -330,6 +350,7 @@ span.mm-featured-cat {
 
 	.uk-text-lead {
 		margin-bottom: 60px;
+		line-height: 1.6;
 	}
 }
 
@@ -388,4 +409,10 @@ pre.highlight {
 img.mm-boxLogo {
 	max-height: 80px;
 	margin-bottom: 30px;
+}
+
+// Pagination
+
+.uk-pagination > * > * {
+	color: #50a53c;
 }
