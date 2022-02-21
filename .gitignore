@@ -7,3 +7,5 @@ node_modules
 *.swp
 .DS_Store
 tmp/*
+project.sublime-workspace
+project.sublime-project
