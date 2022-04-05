@@ -1,6 +1,6 @@
 # Micromata Labs - Jekyll theme
 
-Based on Desk Theme by [Unbound Studio](https://unbound.studio).
+Based on _Desk Theme_ by [Unbound Studio](https://unbound.studio).
 
 
 
