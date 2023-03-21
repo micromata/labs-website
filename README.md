@@ -58,9 +58,8 @@ npm install
 
 Run the following to generate your site:
 ```shell
-bundle exec jekyll serve
+npm run build
 ```
-
 
 
 ### Development
