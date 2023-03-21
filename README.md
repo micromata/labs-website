@@ -1,3 +1,5 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/90583c08-ed01-46d3-b9ed-11cf05ae275e/deploy-status)](https://app.netlify.com/sites/micromata-labs/deploys)
+
 # Micromata Labs - Jekyll theme
 
 Based on _Desk Theme_ by [Unbound Studio](https://unbound.studio).
