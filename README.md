@@ -1,4 +1,4 @@
-[![Netlify Status](https://api.netlify.com/api/v1/badges/90583c08-ed01-46d3-b9ed-11cf05ae275e/deploy-status)](https://app.netlify.com/sites/micromata-labs/deploys)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/2c75d4a8-9cd9-42b8-bff8-8bb9e0cbfd76/deploy-status)](https://app.netlify.com/sites/micromata-labs/deploys)
 
 # Micromata Labs - Jekyll theme
 
