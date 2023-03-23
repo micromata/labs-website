@@ -10,5 +10,5 @@ hero:
 
 {% include boxes.html columns="3" title="Unsere Projekte" subtitle="Lorem Ipsum" %}
 
-{% include featured.html featured=true title="Trends & Themen" subtitle="Expertenwissen zu den Themen Development, Open Source und Security von Entwicklern für Entwickler." %}
+{% include featured.html featured=true title="Trends & Themen" subtitle="Fachwissen zu den Themen Development, Open Source und Security von Entwickler:innen für Entwickler:innen." %}
 
