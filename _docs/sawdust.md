@@ -1,6 +1,6 @@
 ---
 title: Sawdust
-subtitle: GWiki is a wiki-based multi purpose content management system.
+subtitle:
 image:
 tags: [java, maven, juniot]
 author: cstein
