@@ -5,6 +5,6 @@ image: labtocat.jpg
 tags: [homemade]
 ---
 
-Hier möchten wir gerne Open Source Projekte vorstellen die zwar von uns Micromaten, jedoch nicht im Rahmen der Arbeitszeit von Micromata entstanden sind. Da wir Open Source lieben wollen wir eine Auswahl dieser Perlen mit euch teilen.
+Hier möchten wir gerne Open Source Projekte vorstellen die zwar von uns Micromat:innen, jedoch nicht im Rahmen der Arbeitszeit von Micromata entstanden sind. Da wir Open Source lieben wollen wir eine Auswahl dieser Perlen mit euch teilen.
 
 {% include boxes-homemade.html columns="2" %}
