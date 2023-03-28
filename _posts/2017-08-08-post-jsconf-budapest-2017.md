@@ -30,7 +30,7 @@ Die Mischung an Talks war für meinen Geschmack perfekt. Die  technischen Vortr�
 
 Von [Bodil Stokke](https://twitter.com/bodil).
 
-Thema des [Talks](https://bodil.lol/join-us-now/#0) war  die Open Source Bewegung. Von ihren Anfängen, über Lizenzen bis zu ihrer Bedeutung in der heutigen Zeit. Unabhängig davon wie man Open Source  und die Free Software Bewegung interpretiert: Sozialismus, Pragmatismus  oder Kunst. Die Idee und deren Verbreitung ist sehr wichtig. Denn sie  gibt uns Kraft. Open Source sorgt durch die Offenlegung von Quellcode  nicht nur dafür, dass wir Software beeinflussen, reparieren und  verbessern können. Das kann Communities (von Entwicklern und Nutzern)  bilden die anders gar nicht zu denken wären. Vor allem aber bietet es  die Chance zu lernen.
+Thema des [Talks](https://bodil.lol/join-us-now/#0) war  die Open Source Bewegung. Von ihren Anfängen, über Lizenzen bis zu ihrer Bedeutung in der heutigen Zeit. Unabhängig davon wie man Open Source  und die Free Software Bewegung interpretiert: Sozialismus, Pragmatismus  oder Kunst. Die Idee und deren Verbreitung ist sehr wichtig. Denn sie  gibt uns Kraft. Open Source sorgt durch die Offenlegung von Quellcode  nicht nur dafür, dass wir Software beeinflussen, reparieren und  verbessern können. Das kann Communities (von Entwickler:innen und Nutzer:innen)  bilden die anders gar nicht zu denken wären. Vor allem aber bietet es  die Chance zu lernen.
 
 #### Goldilocks and the three Code Reviews
 
@@ -44,7 +44,7 @@ Der [Talk](http://slides.com/vaidehijoshi/better-code-reviews#/) hat – in eine
 
 und konkrete Handlungsmöglichkeiten zum Beheben der Probleme gegeben:
 
-- Code von jedem Reviewen. Auch Senior-Entwicklern: Für eine Kultur sorgen, die Kritik als wertvoll erachtet.
+- Code von jedem Reviewen. Auch Senior-Entwickler*innen:  Für eine Kultur sorgen, die Kritik als wertvoll erachtet.
 - Empathie entwickeln: Auch die positiven Sachen hervorheben
 - Iterieren. Nur durch Wiederholung kann man einen Prozess verbessern
 - Konservationen führen

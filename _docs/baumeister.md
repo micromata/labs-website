@@ -1,6 +1,6 @@
 ---
 title: Baumeister
-subtitle: Baumeister bietet Entwicklern ein einheitliches und gut funktionierendes Projektsetup für das Erstellen von Webanwendungen und zwar unabhängig von Projektgröße und Komplexität
+subtitle: Baumeister bietet Entwickler:innen ein einheitliches und gut funktionierendes Projektsetup für das Erstellen von Webanwendungen und zwar unabhängig von Projektgröße und Komplexität
 image: logo-baumeister.jpg
 tags: [features]
 author: mkuehnel
@@ -12,7 +12,7 @@ author: mkuehnel
 
 ## Baumeister – Frontend Build Workflow für alle Bedürfnisse
 
-Das Ziel des Projektes ist es, Entwickler dabei zu unterstützen, Ihren Frontend-Code zu entwickeln, zu testen, zu optimieren und auszuliefern. Und zwar unabhängig von Projektgröße und Komplexität – von Bootstrap Themes über komplette statische Webseiten bis hin zu Single Page Applications.
+Das Ziel des Projektes ist es, Entwickler:innen dabei zu unterstützen, Ihren Frontend-Code zu entwickeln, zu testen, zu optimieren und auszuliefern. Und zwar unabhängig von Projektgröße und Komplexität – von Bootstrap Themes über komplette statische Webseiten bis hin zu Single Page Applications.
 
 Baumeister bietet unter anderem per Default:
 
@@ -40,7 +40,7 @@ Unterstützung der Qualität für die Produktion:
 - Überprüfen nach bekannten Schwachstellen in Dependencies
 - Entfernen von Console Output and Debugger Statements
 
-Die genannten Punkte schaffen deutliche Vorteile für den Entwickler – zunächst beim Aufsetzen neuer Projekte, da alle nötigen Prozesse mit  sinnvollen Presets automatisiert sind und der Entwickler sich direkt auf das Entwickeln konzentrieren kann. Darüber hinaus werden über  Projektgrenzen hinweg Standards geschaffen und somit für Transparenz und effizienten Know-how-Transfer zwischen Entwicklerteams gesorgt. Kommt  ein neuer Entwickler ins Team, fällt die Einarbeitungszeit wesentlich  kürzer aus.
+Die genannten Punkte schaffen deutliche Vorteile für die Entwickler:innen – zunächst beim Aufsetzen neuer Projekte, da alle nötigen Prozesse mit sinnvollen Presets automatisiert sind und die Entwickler:innen sich direkt auf das Entwickeln konzentrieren kann. Darüber hinaus werden über  Projektgrenzen hinweg Standards geschaffen und somit für Transparenz und effizienten Know-how-Transfer zwischen Entwickelnden gesorgt. Kommt  ein neues Mitglied ins Team, fällt die Einarbeitungszeit wesentlich  kürzer aus.
 
 ### Was macht Baumeister aus?
 
@@ -50,7 +50,7 @@ Ein weiterer Vorteil von Baumeister gegenüber anderen Lösungen ist  die einfac
 
 ### Zielgruppe
 
-Designer mit HTML-Kenntnissen, Frontend- und Full-Stack-Entwickler  für das Erstellen von Prototypen bis hin zu komplexen Webanwendungen
+Designer mit HTML-Kenntnissen, Frontend- und Full-Stack-Entwickler:innen  für das Erstellen von Prototypen bis hin zu komplexen Webanwendungen
 
 ### Technologie-Stack
 

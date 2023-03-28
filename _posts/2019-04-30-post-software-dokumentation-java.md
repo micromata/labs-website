@@ -1,5 +1,5 @@
 ---
-title: Software Dokumentation (für Java Entwickler)
+title: Software Dokumentation (für Java Entwickler:innen)
 author: atippel
 categories: [Best Practices]
 tags: [java]
@@ -7,9 +7,9 @@ shortdesc: Dokumentation da wo sie hingehört.
 featured: true
 ---
 
-Fragt man einen Softwareentwickler nach Dokumentation, wird er  vermutlich zwei Dinge antworten. Wenn er neu in ein Projekt kommt wird   er sich beschweren, dass die Software ja nicht bzw. nicht ausreichend  dokumentiert ist um sich angemessen schnell einzuarbeiten.
+Fragt man  Softwareentwickelnde nach Dokumentation, werden sie vermutlich zwei Dinge antworten. Wenn sie neu in ein Projekt kommen werden sie sich beschweren, dass die Software ja nicht bzw. nicht ausreichend  dokumentiert ist um sich angemessen schnell einzuarbeiten.
 
-Entwickelt er selbst und der Zeitdruck ist wie immer hoch, wird er sagen, dass er  die Dokumentation nach dem Release noch „geradeziehen“ wird, weil ja die Auslieferung vor der Tür steht und noch wichtige Dinge zu tun sind!  Aber nach dem Projekt ist bekanntlich ja vor dem Projekt und deshalb  wird die Dokumentation üblicherweise nicht nach der Auslieferung  geradegezogen, weil man sich ja in das neue Thema einarbeiten muss. Ein  Teufelskreis!
+Entwickeln sie selbst und der Zeitdruck ist wie immer hoch, werden sie sagen, dass sie  die Dokumentation nach dem Release noch „geradeziehen“ werden, weil ja die Auslieferung vor der Tür steht und noch wichtige Dinge zu tun sind!  Aber nach dem Projekt ist bekanntlich ja vor dem Projekt und deshalb  wird die Dokumentation üblicherweise nicht nach der Auslieferung  geradegezogen, weil man sich ja in das neue Thema einarbeiten muss. Ein Teufelskreis!
 
 Ein weiteres Problem auf dem Weg zur perfekten Dokumentation ist das  Tool mit dem diese geschrieben werden muss. Dazu ein Beispiel. Häufig  erlebe ich das Dokumentation in Microsoft-Word geschrieben wird. Gar  nicht so einfach wenn man selbst ein Linux Entwicklungssystem besitzt  und wegen der Word-Makros auch Libre-Office keine Alternative darstellt. Dann heißt es die Virtuelle-Maschine anwerfen um in der Windows10-VM  Word zu starten und dort das Dokument zu bearbeiten. Auch Office365 ist  kein wirklicher Ersatz, denn hier müssen die Dokumente zuerst an  OneDrive übertragen werden. Das ist u. U. nicht ohne weiteres erlaubt.  Ebenfalls häufig wird auf Atlassian Confluence zurückgegriffen. Wieder  ein System das völlig losgelöst von der Software existiert. Hier  benötige ich wieder Zugriffsrechte und muss wissen wo die Dokumentation  eigentlich zu finden ist. All das sind Widerstände die der eher  ungeliebten Tätigkeit „dokumentieren“ im Weg stehen und sie noch  ungeliebter machen. Auch wenn jedes Tool für sich genommen ausgezeichnet funktioniert! Da programmier ich doch lieber noch ein paar Zeilen…
 
@@ -21,7 +21,7 @@ Elegant kann man das mit JBake lösen. JBake ist ein Tool zum  generieren statis
 
 ### Wie geht das?
 
-Man erstellt bspw. parallel zum klassischen „src“ Ordner einen Ordner „documentation“. Dieser wird dann von JBake initialisiert oder mit  einem bestehenden JBake-Template gefüllt. Dort existiert dann ein Ordner „content“ und in diesem können wir bspw. unsere Dokumentation als  Markdown-Datei(en) ablegen. JBake wird dann bei jedem Build eine  statische HTML Seite daraus erstellen. Damit kann jeder Entwickler  direkt aus seiner IDE heraus die Dokumentation bearbeiten. Existiert ein Buildsystem wie bspw. Jenkins, erstellt es automatisch bei jedem Build  den aktuellen Stand und unser Kunde erhält eine vernünftig lesbare  Online-Dokumentation die selbst offline funktioniert!
+Man erstellt bspw. parallel zum klassischen „src“ Ordner einen Ordner „documentation“. Dieser wird dann von JBake initialisiert oder mit  einem bestehenden JBake-Template gefüllt. Dort existiert dann ein Ordner „content“ und in diesem können wir bspw. unsere Dokumentation als  Markdown-Datei(en) ablegen. JBake wird dann bei jedem Build eine  statische HTML Seite daraus erstellen. Damit kann jedes Teammitglied  direkt aus seiner IDE heraus die Dokumentation bearbeiten. Existiert ein Buildsystem wie bspw. Jenkins, erstellt es automatisch bei jedem Build  den aktuellen Stand und unser Kunde erhält eine vernünftig lesbare  Online-Dokumentation die selbst offline funktioniert!
 
 Wir benötigen dazu unsere klassische Ordnerstruktur für ein maven  Projekt in der wir zusätzlich einen Ordner „documentation“ erstellen.
 

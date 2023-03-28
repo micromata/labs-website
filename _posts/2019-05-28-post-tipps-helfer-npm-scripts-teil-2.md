@@ -102,7 +102,7 @@ Abhängig von der Anzahl an Tasks kann es schwer sein sich jeden einzelnen Task 
 
 Die beiden größten Mankos bei Verwendung von npm Scripts für komplexere Build Setups sind:
 
-- Keine Möglichkeit die Tasks mit Infos für anwendende Entwickler zu versehen.
+- Keine Möglichkeit die Tasks mit Infos für anwendende Entwickler:innen zu versehen.
   - Negative Auswirkung auf die Developer Experience.
 - Keine Möglichkeit die Tasks mit Kommentaren zu versehen.
   - JSON unterstützt nun mal keine Kommentare.

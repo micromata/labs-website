@@ -1,6 +1,6 @@
 ---
 title: HTTP Fake Backend
-subtitle: HTTP Fake Backend ermöglicht es Frontendentwicklern mit Hilfe eines eigenen Servers komfortabel und flexibel ein simuliertes Backend sowie gemockte Daten für die Anwendungsentwicklung bereitzustellen.
+subtitle: HTTP Fake Backend ermöglicht es Frontendentwickler:innen mit Hilfe eines eigenen Servers komfortabel und flexibel ein simuliertes Backend sowie gemockte Daten für die Anwendungsentwicklung bereitzustellen.
 image: logo-fake-backend.png
 tags: [api, json, javascript, node]
 author: mkuehnel

@@ -12,8 +12,8 @@ Dabei werden die Responses in Java-Objekten gekapselt, so dass ein Zugriff über
 Motivation des Projektes ist, eine Bibliothek zur Verfügung zu haben, mit der über die REST-API V2 auf die Plattform Jira von Atlassian  direkt und nicht nur über die Webseite zugegriffen werden kann.
  Der JiraRestClient kapselt die Responses der Funktionen  der Jira-REST-API in Java-Objekte. Dadurch kann eine Java-Anwendung auf  Jira zugreifen und die Response der REST-API direkt verwenden.
 
-**An welche Personen/ Entwickler evtl. Umfeld richtet sich das Projekt**
- Entwickler die über ihr eignes Java Tool auf die Jira-REST-API einfach zugreifen wollen.
+**An welche Personen/ Entwickler:innen evtl. Umfeld richtet sich das Projekt**
+ Entwickelnde, die über ihr eignes Java Tool auf die Jira-REST-API einfach zugreifen wollen.
 
 **Technologiestack**
  Der Client ist in Java geschrieben und verwendet Future, kann also sehr gut asyncron genutzt werden.
