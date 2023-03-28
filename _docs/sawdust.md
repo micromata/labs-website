@@ -18,7 +18,7 @@ Sawdust zeigt ein Java Projektbeispiel mit klassischen und modularen Tests. Dabe
 
 ### Zielgruppe
 
-Java-Entwickler
+Java-Entwickler:innen
 
 ### Technologie-Stack
 

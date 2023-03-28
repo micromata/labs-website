@@ -23,7 +23,7 @@ Zur Automatisierung dieses Use Case wurde die CLI Applikation [`check-packages`]
 
 ### Zielgruppe
 
-Entwickler, DevOps, Legal
+Entwickler:innen, DevOps, Legal
 
 ### Technologie-Stack
 

@@ -8,11 +8,11 @@ author: rkommer
 
 ### Open-Source Software für nachhaltige Testsszenarien
 
-Unit-Tests, das gängige Werkzeug beim Test von Anwendungen, sind meist so angelegt, dass sie schlecht lesbar und nur für die Implementierung der Erstanwendung gut geeignet sind. Folgende Projektstufen, die über CRs notwendig werden, erfordern einen hohen Aufwand bei der Anpassung. Meist vom Effekt begleitet, dass die Ursprungsentwickler nicht mehr verfügbar sind und Kosten und Zeitplan, das geeignete Anpassen der Tests sprengen. TPSB will dem Vorbeugen, indem bereits bei der Erstellung der Test ein anderer Ansatz für das Vorgehen gewählt wird, der den Fokus auf Wiederverwendung der Tests, Lesbarkeit, fachliche Nachvollziehbarkeit und einem mittlerem Anpassungsaufwand bei hoher Wiederverwendbarkeit legt.
+Unit-Tests, das gängige Werkzeug beim Test von Anwendungen, sind meist so angelegt, dass sie schlecht lesbar und nur für die Implementierung der Erstanwendung gut geeignet sind. Folgende Projektstufen, die über CRs notwendig werden, erfordern einen hohen Aufwand bei der Anpassung. Meist vom Effekt begleitet, dass die Ursprungsentwickler:innen nicht mehr verfügbar sind und Kosten und Zeitplan, das geeignete Anpassen der Tests sprengen. TPSB will dem Vorbeugen, indem bereits bei der Erstellung der Test ein anderer Ansatz für das Vorgehen gewählt wird, der den Fokus auf Wiederverwendung der Tests, Lesbarkeit, fachliche Nachvollziehbarkeit und einem mittlerem Anpassungsaufwand bei hoher Wiederverwendbarkeit legt.
 
 ### Zielgruppe
 
-Entwickler, Requirement Engineers, Spezifikationsersteller, Tester
+Entwickler:innen, Requirement Engineers, Spezifikationsersteller:innen, Tester:innen
 
 ### Technologie-Stack
 

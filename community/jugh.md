@@ -11,7 +11,7 @@ scope: [Community]
 
 JUGH wurde 2009 von Micromata gegründet und wird seither von uns betreut. Schau doch mal auf unserem [JUGH Meetup-Space](https://www.meetup.com/de-DE/Java-User-Group-Hessen-JUGH/) vorbei.
 
-Zur Tradition der JUGH gehören außerdem so genannte „Stand-up Codings“, wo jeder Java-Entwickler die Gelegenheit bekommt, spontan zu einem Java-Thema seiner Wahl zu sprechen. Die JUGH trifft sich einmal im Monat (in der Regel immer am letzten Donnerstag) in Kassel.
+Zur Tradition der JUGH gehören außerdem so genannte „Stand-up Codings“, wo jede(r) Java-Entwickler:in die Gelegenheit bekommt, spontan zu einem Java-Thema seiner Wahl zu sprechen. Die JUGH trifft sich einmal im Monat (in der Regel immer am letzten Donnerstag) in Kassel.
 Eine Voranmeldung ist meistens nicht nötig, der Eintritt ist frei.
 
 

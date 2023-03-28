@@ -25,7 +25,7 @@ Ebenfalls dort findet ihr eine genaue Anleitung mit allen verfügbaren Optionen 
 
 ### Zielgruppe
 
-Software-Entwickler
+Software-Entwickler:innen
 
 ### Technologie-Stack
 

@@ -11,7 +11,7 @@
   doc: gwiki
 
 - title: HTTP Fake Backend
-  desc: Stellt Frontend-Entwicklern komfortabel und flexibel ein simuliertes Backend sowie gemockte Daten für die Anwendungsentwicklung bereit.
+  desc: Stellt Frontend-Entwickler:innen komfortabel und flexibel ein simuliertes Backend sowie gemockte Daten für die Anwendungsentwicklung bereit.
   icon: logo-fake-backend.png
   doc: http-fake-backend
 
