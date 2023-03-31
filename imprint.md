@@ -8,11 +8,10 @@ permalink: /imprint.html
 ## Anschrift
 
 Micromata GmbH  
-Marie-Calm-Straße 1-5
-
+Marie-Calm-Straße 1-5  
 34131 Kassel Germany
 
-Niederlassung Bonn:
+#### Niederlassung Bonn:
 
 Menuhinstraße 8,  
 53113 Bonn
@@ -21,7 +20,6 @@ Menuhinstraße 8,
 
 [www.micromata.de](http://www.micromata.de)  
 [info@micromata.de](mailto:info@micromata.de)
-
 
 Tel: +49 561 31 67 93-0  
 Fax: +49 561 31 67 93-11
@@ -39,4 +37,4 @@ Kai Reinhard
 Marie-Calm-Straße 1-5  
 34131 Kassel
 
-Dieses Impressum ist auch gültig für die Micromata-Webauftritte bei Facebook, Instagram, Twitter,  XING, LinkedIn, GitHub oder Youtube  und Kununu.
+Dieses Impressum ist auch gültig für die Micromata-Webauftritte bei Facebook, Instagram, Twitter,  XING, LinkedIn, GitHub oder Youtube und Kununu.
