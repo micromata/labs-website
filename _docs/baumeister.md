@@ -40,17 +40,17 @@ Unterstützung der Qualität für die Produktion:
 - Überprüfen nach bekannten Schwachstellen in Dependencies
 - Entfernen von Console Output and Debugger Statements
 
-Die genannten Punkte schaffen deutliche Vorteile für die Entwickler:innen – zunächst beim Aufsetzen neuer Projekte, da alle nötigen Prozesse mit sinnvollen Presets automatisiert sind und die Entwickler:innen sich direkt auf das Entwickeln konzentrieren kann. Darüber hinaus werden über  Projektgrenzen hinweg Standards geschaffen und somit für Transparenz und effizienten Know-how-Transfer zwischen Entwickelnden gesorgt. Kommt  ein neues Mitglied ins Team, fällt die Einarbeitungszeit wesentlich  kürzer aus.
+Die genannten Punkte schaffen deutliche Vorteile für die Entwickler:innen – zunächst beim Aufsetzen neuer Projekte, da alle nötigen Prozesse mit sinnvollen Presets automatisiert sind und die Entwickler:innen sich direkt auf das Entwickeln konzentrieren kann. Darüber hinaus werden über  Projektgrenzen hinweg Standards geschaffen und somit für Transparenz und effizienten Know-how-Transfer zwischen Entwickelnden gesorgt. Kommt ein neues Mitglied ins Team, fällt die Einarbeitungszeit wesentlich kürzer aus.
 
 ### Was macht Baumeister aus?
 
 Das Verwalten von Dependencies lässt sich komplett über die `package.json` des Projektes lösen. Es muss keine weitere Datei angepasst werden, etwa wenn den JavaScript- und CSS-Bundles neue Libraries oder Dateien wie  Fonts hinzugefügt werden sollen. Hierfür gibt es nämlich in der `package.json`, den Abschnitt `baumeister`, über dessen Properties `bundleCSS`, `bundleExternalJS` und `includeStaticFiles` sich dies realisieren lässt.
 
-Ein weiterer Vorteil von Baumeister gegenüber anderen Lösungen ist  die einfache Adaption von Automatisierung-Tasks durch die wartbare  Struktur. Jeder Task ist ein separates ES6-Modul und im Gulpfile werden  diese Task nur zusammengestöpselt. Wird ein Task während des gesamten  Automatisierungsprozesses nicht benötigt, lässt er sich daher sehr  schnell lokalisieren und leicht deaktivieren – auch wenn man sich mit  der Gesamtstruktur von Baumeister nicht auskennt.
+Ein weiterer Vorteil von Baumeister gegenüber anderen Lösungen ist  die einfache Adaption von Automatisierung-Tasks durch die wartbare Struktur. Jeder Task ist ein separates ES6-Modul und im Gulpfile werden  diese Task nur zusammengestöpselt. Wird ein Task während des gesamten  Automatisierungsprozesses nicht benötigt, lässt er sich daher sehr  schnell lokalisieren und leicht deaktivieren – auch wenn man sich mit  der Gesamtstruktur von Baumeister nicht auskennt.
 
 ### Zielgruppe
 
-Designer mit HTML-Kenntnissen, Frontend- und Full-Stack-Entwickler:innen  für das Erstellen von Prototypen bis hin zu komplexen Webanwendungen
+Designer:innen mit HTML-Kenntnissen, Frontend- und Full-Stack-Entwickler:innen für das Erstellen von Prototypen bis hin zu komplexen Webanwendungen
 
 ### Technologie-Stack
 
@@ -62,7 +62,7 @@ Alle Bestandteile der von uns entwickelten Komponenten sind unter der MIT Lizenz
 
 ### Sourcecode-Ablage
 
-[Micromata Github](https://github.com/micromata/Baumeister)
+[Micromata Github](https://github.com/micromata/Baumeister)  
 [Baumeister.io](https://baumeister.io/)
 
 #### Weiteres
