@@ -104,6 +104,14 @@ authors:
     shortdesc:    Folge Niklas auf <a href="https://github.com/nikeee">GitHub</a>.
     avatar:       avatar-default.jpg
     email:        nmollenhauer(at)micromata.de
+  tmueller:
+    name:         Thomas Müller
+    title:        Softwareentwickler mit Schwerpunkt Jakarta EE
+    shortdesc:    Sternzeichen Elektroingenieur, Radreise Entusiast
+    avatar:       avatar-default.jpg
+    email:        t.mueller(at)micromata.de
+
+
 
 # Social icons displayed in footer
 social:
