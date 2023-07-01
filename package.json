@@ -28,7 +28,7 @@
   "dependencies": {
     "simple-jekyll-search": "^1.7.2",
     "system-font-css": "^2.0.1",
-    "uikit": "^3.16.19"
+    "uikit": "^3.16.22"
   },
   "devDependencies": {
     "jshint": "^2.10.2",
