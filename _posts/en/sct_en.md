@@ -1,1 +1,628 @@
+---
+title: Supply Chain Transparency (SCT)
+author: tmueller
+permalink: /sct/
+shortdesc: Software concept for digital transparent supply chains
+---
 
+Reward instead of punish! We present a software concept for a decentralized, 
+interconnected, and expandable digital supply chain transparency through plugins.
+
+Today, a prominent organic label glorifies an avocado for its good product characteristics, 
+making us quickly forget about many other aspects. Although an organic avocado exhibits 
+excellent product characteristics in terms of its ingredients, it may not fare well in terms of
+resource consumption due to its high water usage and long transportation distances. 
+Moreover, if the working conditions during production are poor, social responsibility is also lacking.
+
+As a consumer, I currently have little opportunity to consider more criteria and aspects in my 
+purchasing decision than what the manufacturers want me to know. Lobby groups often prevent meaningful labeling. 
+Energy labels and nutritional scores only indicate a product based on specific aspects, and other aspects are 
+mentioned only if they benefit the manufacturer. Ingredients are printed in unreadable small fonts on the packaging 
+and are difficult to understand even without knowledge of food chemistry. Lack of transparency paves the way for greenwashing.
+
+Therefore, Micromata has developed an idea for a system focused on Supply Chain Transparency (SCT). 
+The concept presented below and the resulting SCT system aim to enable manufacturers to label comparable products according to 
+uniform criteria and make supply chains transparent. Transparency is rewarded through a point-based system, but non-transparancy is neither 
+prohibited nor penalized.
+
+SCT can benefit especially smaller and medium-sized companies, for whom achieving comprehensive supply chain transparency is challenging. 
+SCT provides manufacturers who are already doing good with an easy way to communicate it to their customers without spending 
+significant amounts of money on software, questionable product labels, and marketing. SCT can also expose those who prioritize 
+marketing and greenwashing over producing genuinely good products. The motto is "Do (verifiably) good and talk about it," 
+rather than "Pretend to do good and talk about it." The more transparent companies become, disclosing their product 
+characteristics and supply chains, the greater the pressure on those who have something to hide.
+
+The system should be implemented and operated by the EU, for example, through values and trade alliances that prioritize climate protection, 
+human rights, animal welfare, data protection, consumer protection, and social responsibility, based on scientific insights. 
+SCT is a system of public interest and does not pursue commercial goals.
+
+# Technical functionality
+
+SCT is a distributed system in which manufacturers can set up and operate one or more SCT instances. These instances are typically 
+hosted in a cloud environment and embedded within a secured SCT infrastructure. Manufacturers can input relevant data concerning 
+supply chain transparency for their products. They always retain control and decide which data is shared externally or which 
+analyses can access specific data within their SCT instance.
+
+Manufacturers can establish data interfaces with SCT instances of their suppliers to establish supply relationships and 
+retrieve data. Suppliers, in turn, do the same with their own suppliers, process the data, and pass on the results. This way, 
+the entire supply chain can be mapped, and relevant data from all supplier branches can be queried.
+
+An essential part of the SCT concept is the use of downloadable software components called SCT plugins, developed and 
+provided by trusted organizations. SCT plugins can request specific access rights to the internal data of the SCT instance, 
+similar to how a smartphone app operates, and this access must be granted by the operators of the SCT instances. 
+SCT plugins generate evaluations based on the internal data of an SCT instance or a completed questionnaire. 
+The SCT plugin records from suppliers are aggregated within the SCT instances and passed up the supply chain.
+
+**Example Pesticide Plugin:** Manufacturers are aware that they need to disclose pesticide residues contained in their 
+products in many markets. They publish this information in their quantity framework, which SCT can automatically 
+propagate and sum up to the end product. Countries and markets typically have different tolerance limits for pesticide 
+residues, which are reflected through dedicated plugins with national limits. If I, as a manufacturer, harvest and 
+process the vegetables myself, I must determine the maximum residue level on my own or obtain it from my suppliers.
+
+**Example Hydrogen Plugin:** Even a product like hydrogen, consisting solely of the smallest possible element and typically 
+evaluated based on its purity, can be assessed through an SCT plugin. This plugin considers the CO2 footprint of the 
+production process for individual supplier sources, the working conditions in the manufacturing countries, the financial 
+distribution within those countries, and the resource consumption during transport. Companies that require significant 
+amounts of hydrogen for their production processes can incorporate this information into the resource and social responsibility 
+assessment of their products. We have painfully learned from Russian gas that purity and price should not be the sole decision criteria.
+
+**Example Gastronomy Plugin:** Gastronomers employ and pay staff, use ingredients and tools, and consume resources. 
+Therefore, the entire gastronomy business as well as each dish on the menu can be evaluated based on various criteria. 
+While many people now buy organic products at supermarkets, who asks about the origin when ordering a €7 schnitzel in a restaurant?
+
+**Example Halal Plugin:** A Muslim community could release a plugin that queries whether a product contains pork. 
+The plugin could consist of a form with just one checkbox, which could even be created using a configurator. 
+Unlike a legislative labeling requirement, which can take years to be introduced, rolling out such a simple 
+plugin would only take days or weeks.
+
+Plugins can operate independently and make their results accessible through the manufacturer's websites or a dedicated app, 
+or they can provide traceability through printed product labels (e.g., animal welfare labels). Additionally, plugins can contribute points for evaluation criteria.
+
+Their scope is not limited to a specific product and its packaging but can also reward local markets for short transportation 
+distances, for example. Plugins can come and go, adapting to existing and future requirements. They can be voluntary or m
+andatory in certain markets. Ultimately, the choice of themes they address is a matter of imagination.
+
+While SCT instances and the underlying cloud and communication infrastructure form the operating system of SCT, SCT plugins 
+are the apps that make SCT a powerful and future-proof tool.
+
+# Multiscore Product Labels
+
+In addition to product labels that indicate specific product attributes, SCT introduces a unified multiscore product label that 
+evaluates a product in the following assessment areas:
+
+- Product Characteristics 
+- Resource Consumption 
+- Social Responsibility
+
+Scores similar to NutriScore or energy labels are calculated, with specific plugins collecting points for each respective score area throughout the supply chain.
+
+The selection of plugins to be included in the evaluations is determined by committees comprising representatives from politics, lobby groups, NGOs, and environmental organizations. The product scores are printed on packaging or invoices and published on SCT product websites.
+
+Existing product labels can continue to exist or maintain their validity for a transitional period because they are easily understood and straightforward for many people. However, in the future, they could be documented and made traceable through SCT. The numerous product labels, often driven by marketing, are funded by manufacturers, ultimately passing the costs on to consumers. Many well-intentioned government initiatives to introduce mandatory labels often fail due to manufacturer vetoes or are simply challenging to implement and verify, such as the Supply Chain Act. Both sides invest a significant amount of effort and money, resulting in limited outcomes.
+
+The underlying framework for calculating the scores can be relatively simple:
+
+- If a product has good attributes in an assessment area, it receives many points.
+- If a product has poor attributes in an assessment area, it receives few points.
+- If a branch of the supply chain is not represented in SCT, the product from that branch receives no points.
+- If a branch of the supply chain is represented in SCT but not disclosed, the product from that branch may receive fewer points.
+- If a legally mandatory plugin, such as the ban on child labor in the Supply Chain Act, is not used in a supplier branch, the product does not receive market approval.
+
+![Multiscore Product label](/uploads/posts/sct-multiscore-produktlabel.png)
+
+*Fig. 1 Multiscore Product label*
+
+A multiscore product label is typically printed on the packaging of a product and reflects the state at the time of production in terms of score points.
+
+A QR code directly links to the current SCT information webpage for the product, which can be accessed via a browser and/or a dedicated app.
+
+In addition to packaging, a multiscore (product) label can be used in other ways:
+
+- On a product website,
+- On a supermarket receipt, averaged across the entire purchase,
+- Score of a market/retail chain, averaged over the sold products over time,
+- Score of a corporation, averaged over the sold products over time
+- Score of a country, averaged over the exported and imported products over time,
+- Personal score that shows only my consumption behavior over time, e.g., in an app,
+- Invoices of various types
+
+Certainly, many people in a shopping market will not check every product in an app and consider the scores before making a purchase. 
+However, perhaps later at home, I may look at which product on my supermarket receipt negatively impacted my social responsibility score 
+and decide not to purchase that product again.
+
+
+## Evaluation Criteria of the Multiscore Label
+
+### Product Properties
+
+The product properties are primarily determined by the quality of the ingredients and the quality of processing. 
+Each product type has different evaluation criteria. Thus, the evaluation of the product properties of a food item can 
+largely follow the current NutriScore system and be supplemented with additional criteria such as potentially harmful ingredients. 
+For technical products such as a TV, however, factors like picture and sound quality, as well as energy consumption (current energy label), 
+are more important.
+
+### Resource Consumption
+
+In addition to the sheer quantity of ingredients that can determine the quality of a product, resource consumption also plays a 
+central role in a comprehensive product evaluation. Therefore, there is a score for resource consumption that considers not only 
+but also aspects of climate change. This primarily involves resource consumption during manufacturing and transportation throughout 
+the entire supply chain.
+
+Within an SCT (Supply Chain Transparency) instance of a manufacturer, the resource consumption resulting from value creation is 
+documented for various aspects such as climate impact, energy, water, raw materials, nature conservation, etc. These data are then
+passed on to the next higher SCT instance and accumulated throughout the entire supply chain. In the case of a supplier relationship,
+resource consumption during transportation is also considered.
+
+This area also encompasses topics such as the recycling rate and recyclability of products and packaging, as well as an effective 
+deposit and return system.
+
+### Social Responsibility
+
+We live in a stable democracy and, within the EU, a community based on shared economic and values principles. 
+While we all benefit from a thriving economy, we often turn a blind eye to certain values, especially when it comes to low prices.
+
+However, in the end, we also finance autocracies and countries where human rights are not strictly observed, child labor and slavery exist, 
+and people earn very little due to low wages. The war between Russia and Ukraine, which is largely funded by energy money for Europe, 
+has made it abundantly clear that we should no longer turn a blind eye to this issue.
+
+Corporations, autocracies, and their state-owned enterprises should also be evaluated for their behavior in the countries where they 
+manufacture their products. An effective measure for this is the flow of money down the supply chain, which can be answered, for example, 
+through plugins, addressing questions like:
+
+- How much money flows into a state-owned enterprise of an autocratic country?
+- How little money reaches the people who contribute to value creation in the manufacturing countries?
+- Are there instances of child labor or slavery in the supply chain?
+- Was animal welfare taken into account in the production of animal-based ingredients?
+
+Money flows (absolute or proportional) can be internally recorded throughout the entire supply chain and used in calculating 
+the "Social Responsibility" score, without revealing too many trade secrets.
+
+The major deficiencies in this area are often exposed in the press and through extensive research. 
+Some manufacturers then take an offensive approach and create half-hearted and opaque product labels that are meant to suggest e
+verything is fine, but are not truly verifiable. Even though many of these efforts may be well-intentioned, ultimately only 
+economic success matters, which is simply the nature of a business enterprise. As a result, some companies push the ethical boundaries, 
+and some even blatantly cross them. The often-cited excuse that everyone else (abroad) is doing the same and that otherwise they would 
+not be competitive cannot be easily dismissed.
+
+SCT provides an objective perspective on the behavior of companies and nations, making them more comparable. 
+SCT highlights those who demonstrate exemplary conduct.
+
+# SCT Instance
+
+Manufacturers can unlock an SCT instance to maintain the composition and origin of their products. Through encryption and 
+security techniques, only the information allowed by the SCT instance owner is released.
+
+Internally, an SCT instance can work with bill of materials and recipes, enabling inference of a product's composition 
+based on the quantity structure of its components. **Important!** SCT can function even without the complete composition 
+of a product being recorded. It is sufficient to provide the product information required by a specific plugin.
+
+The composition of a product can be effectively represented as a hierarchical graph, where the nodes represent the 
+product components and their units of measure (g, m, l, pcs...). The edges of the graph represent the quantity and 
+unit of measure by which a component flows into a product or intermediate product.
+
+The properties of a purchased product component can be retrieved from the supplier's SCT instance. 
+The published information can be cached in the proxy cache of the own SCT instance and used as if it were the 
+manufacturer's own product component for the quantity structure. Since product properties are generally long-lasting, 
+real-time querying of the entire supply chain across multiple SCT instances is not necessary.
+
+The connection between a supplier product and its proxy in another SCT instance is bidirectional. 
+This means that if the properties of a supplier product change, all proxies in other SCT instances are notified of a 
+new version with different properties that can be used in the future or that the properties of an existing product have 
+changed (e.g., new properties have been published or scores have been modified due to new regulations). 
+Additional properties can be queried from suppliers on the customer side through plugins (see below).
+
+SCT can handle versioning and alternative positions.
+
+In theory, SCT could make the entire product tree with the quantity structure visible in the end product, but 
+bills of materials and recipes definitely fall under trade secrets. SCT rather answers specific questions that can be 
+asked about a product, such as:
+
+- What is the protein content of a product (related to Nutriscore)?
+- Can a specific allergen be present in the product (e.g., "...may contain traces of nuts")?
+- Contains less than xxx ppm of pesticides.
+
+The questions that can be asked about a product are realized through SCT plugins (see below), and their questions and 
+answers can be published and passed along the entire supply chain. This way, no internal details are disclosed, only 
+specific selected product properties.
+
+By using open-source and signing the SCT application itself, it can be audited at any time, ensuring that no backdoors 
+are built into it that could enable industrial espionage. The goal here is to keep the costs and entry barriers for 
+manufacturers as low as possible and address concerns regarding the protection of trade secrets.
+
+The following diagram illustrates an example excerpt from a supply chain tree represented by connections between SCT instances:
+
+![CT Topology with SCT Instances of a Supply Chain](/uploads/posts/sct-instance.png)
+
+*Fig. 2: SCT Topology with SCT Instances of a Supply Chain*
+
+As shown in Figure 2, an SCT instance provides a technical infrastructure for determining the quantity structure of a product. 
+Information about resource consumption, working conditions, and financial flows can also be captured. 
+These pieces of information can be obtained from supplier products through data connections to the SCT instances of the 
+suppliers and aggregated with the company's own data. Authorized plugins can access this data and generate automatic evaluations from it.
+
+SCT instances typically run on trusted cloud platforms, where registered companies can request SCT instances. 
+If the software of the SCT instances is ensured to be unaltered through signing and certificates, companies may also 
+operate their own SCT instances. SCT instances can have different variations and be optimized for specific use cases. 
+For example, an automotive manufacturer will have entirely different requirements for the functionalities of an 
+SCT instance compared to a food manufacturer.
+
+The underlying source code of all SCT instance variations is published as open source in corresponding repositories. 
+This serves the purpose of providing manufacturers with the assurance that their trade secrets are securely stored and encrypted, 
+while also ensuring that the system's outcomes are not manipulated. Executable instances can be obtained through SCT software 
+repositories or directly requested and deployed on a cloud platform.
+
+SCT plugins can originate from various sources and are provided in plugin repositories by trusted organizations. 
+Here as well, the source code and underlying regulations and algorithms are published. Thus, a country, an organization 
+like the EU, or a trade agreement can have their own plugin repositories.
+
+
+# SCT-Plugins
+
+SCT incorporates an open plugin concept, which allows specific questions to be asked about a product and enables the propagation 
+of these questions and answers throughout the entire supply chain. SCT plugins themselves are also open source, signed, and can be 
+downloaded by other SCT instances within the supply chain.
+
+Plugins are specified and developed by trusted organizations, undergo independent verification, are signed, and then made 
+available in a public repository. They have a unique ID that can be accessed by all SCT instances in the supply chain. 
+It is not necessary for all operators of SCT instances in the supply chain to individually manage the latest plugins. 
+It is sufficient for one operator in the supply chain to use a new plugin (for example, because it is mandated by their 
+country's regulations). The plugin then automatically requests the same plugin from all participating SCT instances of the suppliers, 
+where it needs to be approved by the operator of the SCT instance. The plugin aggregates the results from all suppliers that also a
+pprove the plugin and publishes the results for its customers, who can then approve the plugin and pass the results further up the chain.
+
+The following diagram illustrates how an SCT plugin spreads across the supply chain:
+
+![Rolling out an SCT Plugin](/uploads/posts/sct-plugin-rollout.png)
+
+*Fig. 3 Rolling out an SCT Plugin
+
+A plugin can be introduced anywhere in the supply chain tree and then propagate autonomously through the parts of the s
+upply chain that the SCT instance operators allow - both downstream and upstream.
+
+Similar to smartphone apps, a permission mechanism is in place to restrict access to internal data. 
+The plugin requests specific permissions necessary for its functionality from the operator of the SCT instance, 
+who then needs to confirm them. Smaller companies that may not have dedicated personnel for this purpose can also 
+grant plugins blanket permissions if they come from a trusted repository. Simple plugins that, for example, determine 
+the quantity of a particular substance or consist of a simple form, can also be created with a configurator and can be 
+considered safe without verification.
+
+Plugin repositories are aware of which plugins are deployed in which SCT instances and automatically inform them about updates. 
+Depending on the settings in the SCT instances, they can be automatically updated if the permission set does not change or 
+they need to be reapproved.
+
+To comply with specific government regulations, there will be plugins whose use is mandatory throughout the entire supply 
+chain if the product is to be sold in those countries. However, the use of plugins is generally voluntary for manufacturers.
+
+The fundamental idea behind SCT plugins is that they do not act punitively or must be mandatory but rather ask specific 
+questions about the product and supply chain, and contribute points to the scores. Manufacturers can freely decide not to 
+publish the plugin results for a branch of their supply chain or not to approve certain plugins, but they have to accept 
+receiving fewer points for their scores as a consequence. However, it is still possible to have restrictive plugins that 
+can lead to the exclusion of a product from the market, such as plugins addressing child labor within the supply chain.
+
+For example, there can be plugins that extrapolate the quantity of a specific substance to the final product. 
+These plugins utilize the composition structure of a product and contribute to the "product property" score. 
+Similar plugins can exist for organic labels, which primarily contribute to the "product property" score. Meanwhile, 
+an animal welfare label plugin would contribute points to the "social responsibility" score.
+
+![Working of SCT Plugins](/uploads/posts/sct-plugin-function.png)
+
+*Abb. 4 Working of SCT Plugins
+
+## Fully Automatic Plugins
+
+A fully automatic plugin, for example, queries a list of declarable ingredients for a specific product from the corresponding 
+SCT instance. Currently, certain ingredients already need to be disclosed, and certain thresholds need to be met. 
+For at least these substances, the manufacturer should store the quantities contained in the product as key/value pairs 
+in the database of their SCT instance and/or retrieve them from their suppliers. Allergens that may potentially be 
+present (e.g., "may contain traces of nuts") can also be stored in the database with a symbolically small quantity. 
+If the product consists of multiple supplied components, the plugin automatically queries the SCT instances of the 
+suppliers and aggregates the list of ingredients, passing it up the chain.
+
+For example, there may be a rule that a product must not exceed a certain amount of lead. A fully automatic plugin that 
+checks this rule automatically calculates the amount of lead from its own ingredients and the quantities obtained 
+from the same plugin in the suppliers' databases, and then passes the total amount upward. If there is a problem, 
+the manufacturer can immediately identify which supplier product is causing the issue and potentially replace it with another. 
+During installation, this plugin requests permission to access the quantity of lead in the product. T
+he SCT instance then only allows this plugin to access that specific value. However, such a plugin can also simply 
+check the limit without disclosing the absolute amount of lead.
+
+## Semi-Automatic Plugins
+
+A ground beef lasagna may be promoted with animal welfare ground beef and a prominent animal welfare label, but often, 
+the production methods for the cheese, cream, or eggs used in the pasta are unknown. A semi-automatic animal welfare 
+plugin could ask, for example, "What percentage of animal-based ingredients comes from humanely raised animals?" 
+There are specific guidelines for each type of animal, and suppliers can manually answer "yes" or "no" for each ingredient. 
+Based on the composition structure of the ingredients, the plugin automatically calculates the total quantity of animal-based 
+ingredients and then determines the proportion produced according to animal welfare criteria.
+
+## Manual Plugins
+
+Manual plugins are typically web forms with questions about the product that can be queried throughout the entire supply chain. 
+For example, a manufacturer can use a plugin to request confirmation from their suppliers that there is no child or slave labor 
+within their supply branches or that minimum safety standards are met. This allows the manufacturer to delegate responsibility 
+to the suppliers but still remains obliged to verify the accuracy of the statements. The documentation of supplier statements 
+with SCT plugins provides auditors and journalists with leads to uncover false claims and misconduct, thereby increasing the 
+threshold for spreading misinformation.
+
+## Score Plugins
+
+Score plugins contribute to the calculation of one of the three evaluation scores: product properties, resource consumption, 
+or social responsibility in the multiscore label. For each evaluation score, multiple plugins can illuminate different aspects 
+within that domain. For example, regarding the resource consumption evaluation score, the following aspects could be considered:
+
+- Energy consumption/CO2 emissions during production
+- Energy consumption/CO2 emissions during transport
+- Energy consumption/CO2 emissions of the product throughout its assumed lifespan
+- Recycling percentage in the product and packaging
+- Recyclability of the product and packaging
+- Take-back or deposit system
+- Raw material consumption
+- Land consumption
+- Environmental damage
+- ...
+
+For each aspect, there is a reference value that corresponds to 100% or the full score. The selection of aspects, their 
+weighting in the score, and the reference values are determined by government committees involving lobbying groups, 
+NGOs, and environmental organizations. The committees also determine the weighting of each aspect in the overall score. 
+Through the regular work of these committees, additional aspects may be added or removed, and reference values can be adjusted. 
+In the simplest case, the configuration of a score plugin is modified, and it can be rolled out to the market within hours. 
+For more complex plugins, adjustments or new development may be necessary before they can be deployed. 
+An imprinted Multiscore product label may become outdated until the next batch, but the most up-to-date values can 
+always be accessed on the SCT product page. Additionally, digital price tags at the point of sale can display the 
+latest Multiscore or indicate that a more recent version is available online.
+
+## Interface Plugins
+
+SCT does not aim to replace existing enterprise resource planning (ERP) systems but rather complement them with new aspects. 
+Large manufacturers, for example, can access a wealth of information through their SAP inventory systems, which SCT also aims to provide. 
+To incorporate data from inventory systems, SCT will offer open interfaces through which, for example, the declarable ingredients of 
+a product can be imported from an inventory system. For the major systems available in the market, SCT can also access their 
+interfaces and retrieve the corresponding data. This is achieved through the implementation of interface plugins that 
+retrieve data from an ERP system and import it into the material master data within an SCT instance. Accordingly, 
+during installation, the plugin requests permission, such as the ability to import specific ingredients into the SCT database. 
+Additionally, the plugin needs to be configured with the URLs and access credentials for the interfaces of the inventory system.
+
+Automatic and interface plugins can also interact with each other. For example, if an automatic plugin requests a new ingredient 
+whose quantity has not yet been imported from the inventory system into the SCT instance, it could be retrieved using the interface plugin.
+
+# SCT Product Website
+
+The SCT product website can be accessed through the QR code printed on the Multiscore product label. It is hosted on the manufacturer's 
+SCT instance and displays the published product properties and supply chain relationships. From there, users can navigate up or down 
+the supply chain tree (including customer references) and view the properties and scores of the supplier products included in the 
+specific product.
+
+In addition to the legally required ingredient information, which is typically found on food packaging, the website should also 
+provide explanations about the purpose of additives and any potential issues associated with them. Users can also learn which 
+plugins were used to calculate the scores and gain a better understanding of the functions of each plugin. If a manufacturer e
+xplicitly disallows a particular plugin, this information can also be made public. The manufacturer can use this space to 
+explain why a certain plugin is not allowed.
+
+Users have the opportunity to access all the details published about the product on this website. Additionally, they may be 
+able to retrieve additional non-public information from independent inspectors and testing organizations 
+(such as TÜV, Stiftung Warentest, FDA, etc.), to which the manufacturer can grant special rights.
+
+The SCT product website is not intended for extensive marketing campaigns by the manufacturers but focuses primarily 
+on the information gathered from the supply chain. Manufacturers can provide a brief introduction of themselves and their 
+products and refer users to more detailed information on their own websites.
+
+SCT product websites are tailored to meet the specific requirements of the represented products or services, but they 
+all follow the same navigation and user interface concept.
+
+# Central substance database
+
+The SCT system provides a central substance database from which all substances that may be present in products and potentially 
+require listing can be retrieved. Currently, legally required chemical additives that need to be declared are printed on 
+product packaging, such as cosmetic products. In the future, these additives can also be listed on the SCT product website, 
+enriched with background information from a central substance database. This allows for explanations of the typical uses of 
+an additive and raises awareness of potential health risks. Manufacturers can justify why a particular additive is necessary 
+for their product on the SCT product website.
+
+Manufacturers can include the currently or potentially future declarable additives in the ingredient quantity structure 
+stored in their SCT instance. This prepares them for new regulatory SCT plugins. By adhering to the specified limits, 
+they will immediately comply with the new regulations once the plugin allows it, without any additional effort.
+
+# Transfer of responsibility
+
+SCT provides responsible manufacturers with a tool to make their better practices transparent and justifiable, even in the 
+face of higher costs and prices.
+
+The major advantage for manufacturers is that they can partially transfer responsibility for a product statement to their suppliers. 
+Initially, this can be done through self-disclosures collected via a web form. While self-disclosures should be approached with caution, 
+the statement is documented and will be archived. It cannot be easily deleted if a false statement is exposed. A product statement 
+can carry more weight and score points if it is verified by an independent entity. Independent service providers, such 
+as TÜV, FDA, or organic farming associations, can verify and confirm the statements made.
+
+The more internal technical functionalities (ingredient quantities, resource consumption, working conditions, financial flows, 
+SCT plugins, etc.) provided and utilized within SCT, the more effectively SCT safeguards the made statements automatically. 
+However, SCT also functions without full automation. Deliberate false statements leave a company vulnerable to exposure by 
+journalists or authorities. Uncovered falsehoods can weaken a company's reputation and automatically have a negative impact 
+on the weighting of future self-disclosures. The reasons for downgrading a manufacturer's reputation can be documented in SCT. 
+Manufacturers can take a stance and implement measures to avoid such errors in the future, which can lead to an improvement in reputation.
+
+Smaller manufacturers with limited IT capabilities can enter the self-disclosure of their products into a web form provided 
+by a customer in their SCT instance. This allows them to answer questions posed by a plugin to the supply chain without 
+having to operate their own SCT instance. Additionally, an SCT instance operator can manually enter the properties of 
+supplier products if their suppliers do not want or are unable to participate in the SCT system. In general, the party 
+responsible for the entry is also responsible for the accuracy of the information and must obtain confirmation from their suppliers.
+
+# Independent Examination
+
+Trust is good, but... Companies always strive to present themselves and their products and services in the best possible light. 
+Especially when the supply chains extend to countries with weaker regulations, it is difficult to ensure complete tamper-proof 
+transparency in the supply chain. However, if a company wants to earn points for their scores even from these "opaque" branches, 
+they must document these supplier branches. However, this does not necessarily mean that these supplier relationships need to be 
+publicly disclosed. There are many good reasons for companies not to do so. In order for the points from these supplier branches 
+to contribute to the scores, manufacturers must disclose the supplier relationships to independent and trustworthy auditors 
+(also in terms of trade secrets).
+
+For manufacturers, there is the option to commission a potentially fee-based audit in order to have the earned points fully credited. 
+Alternatively, the manufacturer can agree to a random audit and, in the event of an audit, must provide auditors with access to data and, 
+if necessary, entry to the company premises. Without a conducted random audit, the score points may only be weighted in the overall result. 
+If an audit is completely refused, there will be no score points or the product label will not be recognized.
+
+The work of independent auditing organizations is also documented and archived. In the event of false audit certificates being exposed, 
+the reputation of the auditing organizations themselves can be downgraded, thereby reducing the weight of their audit statement.
+
+# PPilot Phase and Implementation of SCT
+
+SCT should be rolled out internationally at the EU level and initially made available to interested manufacturers who have a need to 
+document their better behavior transparently. After the pilot phase and the insights gained from it, SCT will be actively promoted 
+and distributed to registered companies, for example, using data from the trade register or tax authorities. Suitable measures 
+(e.g., postal activation letters) will be implemented to ensure that only genuine companies are granted access to an SCT instance. 
+Foreign supplier companies that are not within the jurisdiction of the EU, for example, have the option to apply for an SCT instance. 
+The identity of these manufacturers will be verified and confirmed using the respective trade registers and authorities. 
+For suppliers for whom this is not possible or who refuse, manufacturers must request product statements from their suppliers or 
+have them entered through web forms. SCT provides functionalities to enter self-declarations through forms or delegate the entry to suppliers.
+
+At the latest, when mandatory regulations such as the Supply Chain Act are implemented through SCT plugins, participation 
+becomes obligatory for companies affected by these regulations.
+
+## Implementing Supply Chains with SCT
+
+A manufacturer who wishes to implement SCT for themselves and their suppliers must first apply for and set up their own SCT instance 
+with a central registration authority. This registration authority ensures the security of the SCT instance and its communication 
+through corresponding certificates. The manufacturer must then enter the data of the product they want to represent with SCT. 
+Furthermore, they need to contact their suppliers and ask them to set up their own SCT instances if they haven't already done so. 
+If intermediaries are involved, they can set up their own SCT instances and pass on the data or establish a direct connection to 
+the manufacturer of the supplied products. Apart from the initial phase, mapping supply chains with SCT will run in parallel with 
+product development and production planning and does not have any specific real-time requirements. Suppliers can also be selected 
+based on what they have already published in their SCT instances or whether they are willing to participate in SCT at all. 
+It should be communicated from the outset that mandatory plugins are planned to implement future legal regulations.
+
+For data storage, an embedded graph or multimodel database such as ArkadeDB or OrientDB should be used, allowing the manufacturer 
+to document the internal hierarchical product composition. Nodes of the graph represent product components, and edges store the 
+units of measure in which a product component flows into the higher-level (intermediate) product, as well as any costs and resource 
+consumption associated with transporting the supplied products. Records containing the results of SCT plugins can be attached as 
+separate documents to a product component node. The internal structure of a plugin record is the responsibility of the plugin developers. 
+These records are passed up through the hierarchy of product components and merged with plugin records from other product components. 
+For purchased product components, the data and plugin records are retrieved from the SCT instances of the respective suppliers. 
+When initiating a supplier relationship for a product component, the requesting SCT instance assigns an ID that can be used to identify 
+this supplier relationship in the long term. The supplier's SCT instance responds with all publicly available product data approved 
+for this customer and the records of the authorized plugins. This data is cached at the graph database node of the supplier component. 
+The customer can pass plugin records from plugins they have already approved up the product tree and make them available to their customers. 
+Plugins that have not yet been approved in their own platform but for which data is provided by the supplier can be subsequently approved 
+and then use those plugin records.
+
+When a manufacturer introduces a new plugin or is required to do so due to regulations, they can explicitly request the plugin 
+results for this plugin from the SCT instances of their suppliers. If the suppliers have already approved the plugin, the response 
+can be provided immediately. If a supplier completely rejects this plugin from the outset, they will decline the request, and that 
+supply chain branch will be interrupted for this plugin. If the supplier needs to approve this plugin and potentially request the 
+plugin results from their own suppliers, they respond with PENDING. If the supplier then approves the plugin and collects the 
+plugin results in their SCT instance and the SCT instances of their suppliers, the supplier transfers the requested plugin result to the 
+SCT instance of the requesting customer, or they subsequently reject the plugin, which is also communicated to the SCT instance of the 
+requesting customer. An open request in the PENDING state initiates a process on both involved SCT instances, which must be resolved 
+manually or automatically, for example, through a timeout.
+
+SCT instances of customers and suppliers are bidirectionally connected through two physical REST interfaces—one upward and one downward. 
+Within this bidirectional connection, there can be multiple logical supplier relationships for each supplied product, identified by an ID.
+
+# Security Aspects
+
+The central registration authority verifies manufacturers using data from the commercial register and, if necessary, other authorities. 
+Once this verification is completed, the SCT instances are supplied with verifiable certificates, and public keys are stored for encrypting 
+data during transport.
+
+The database of an SCT instance is embedded within it and is only stored encrypted on a disk. Database backups leave the SCT instance 
+only in an encrypted form and can only be restored using the credentials of the instance operators.
+
+A transmitted record is always encrypted, and the issuer of the record can determine who is allowed to unpack it in the supply chain. 
+This allows access to a record to be denied to intermediaries involved in the supply chain, while a customer who further processes the 
+supplied product can access it.
+
+Transparency is a key aspect of this concept, but even if a supply chain branch is represented through SCT and data is retrieved from 
+this branch for plugins and product information, it does not mean that this branch has to be made public. There may be deductions in 
+score points for this, but if the intermediate product used in secret is publicly transparent, there should be no deductions. 
+If it is a trade secret which ingredients I use, then I can keep that secret.
+
+The source code of the SCT instances and SCT plugins is published and tagged with checksums that can be used to verify the 
+software version being used for an SCT instance and the plugins. The software for SCT instances and SCT plugins can only be 
+obtained from trusted repositories. Before new SCT instances or plugins are published through these repositories, they must be 
+independently reviewed for security vulnerabilities. An SCT instance itself ensures that a plugin only has access to internal 
+data that was requested during the plugin's approval process. For example, a pesticide plugin can inquire about the amount of 
+pesticide residues for a specific list of known pesticides and their relevant thresholds. The SCT instance guarantees that only the 
+quantity structure of these pesticides can be accessed and that no other ingredients can be queried.
+
+# Technological Requirements
+
+Most of the technological requirements can be implemented using the built-in capabilities of popular frameworks such as Spring, 
+Java EE, or Quarkus. Since these are standalone instances with embedded and secured data storage, rather than individual accounts 
+of manufacturers on a central platform, the footprint of the used components has a significant impact on the expected costs for 
+the cloud infrastructure. A lightweight framework like Quarkus, combined with GraalVM, offers high convenience with minimal footprint, 
+has wide adoption in the programming model (Jakarta EE), and provides high performance. Additionally, it comes with many helpful 
+components that can be added as needed.
+
+The following technological requirements are needed for implementation:
+
+- Middleware framework with an open programming standard like Jakarta EE or Quarkus.
+- The ability to create compilations with a minimal footprint, such as using GraalVM.
+- Rest client and server functionality.
+- Security technology for authentication, authorization, and encryption of transport and data.
+- Embedded multimodel database such as ArcadeDB or OrientDB.
+- BPMN engine for processing approval workflows.
+- The ability to execute dynamically loaded code from SCT plugins in a secure environment.
+- Web framework for SCT product web pages.
+
+# Fault Tolerance and Performance
+
+Although storage space and computing power are no longer major limiting factors, making supply chains for almost all products and 
+intermediate products, such as EU-wide, accessible in one system, initially sounds ambitious. However, as mentioned earlier, 
+this concept does not rely on a single system but rather on a network of distributed and decentralized systems or SCT instances. It is not practical to squeeze the products of a large corporation into a single SCT instance. Each SCT instance should contain a reasonable amount of data tailored to the specific requirements. Whether an SCT instance is created for a business unit, a product family, or even a single complex product is up to the manufacturers and ultimately depends on cost factors such as cloud rentals and maintenance costs.
+
+The requirements for fault tolerance are relatively modest. If an SCT instance fails, the printed multiscore label is still 
+available. Only the detailed page cannot be accessed during the downtime. If an instance fails somewhere in the supply chain, 
+the cache in the product proxies will always provide the latest scores for that branch. Only the ability to trace down the 
+supply chain for that branch will be temporarily disrupted unless the supply chain tree is also cached.
+
+By consistently caching product and plugin information in proxies, performance is not a problem. SCT product web pages for 
+mass-market products still need to handle a large number of requests and scale accordingly. However, tracing down the 
+supply chain will likely be performed by only a few users.
+
+For the majority of the use cases mentioned, there is not much dynamism in data updates. Data is collected parallel to 
+product development and changes infrequently thereafter. New plugins are rolled out and take time to propagate through 
+the supply chains due to manual approval by the operators. Activation processes for plugins are initiated on both sides 
+of a supplier relationship. Of course, customers can also use other communication channels to request plugin approval 
+from their suppliers.
+
+SCT will support dynamic scaling of SCT product web pages using the built-in capabilities of the cloud infrastructure, 
+without requiring special manual actions from manufacturers.
+
+# Conclusion
+
+SCT turns the tables. Instead of politics, environmental organizations, and NGOs chasing after manufacturers and pressuring 
+them to develop better products and behave more responsibly, SCT provides manufacturers who are already doing so with a 
+powerful tool to document their efforts.
+
+Voluntariness, however, does not work in all areas, and where plugins become mandatory, dialogue and debate must continue. 
+The commonly used argument that the costs of introducing and implementing legal regulations, especially for small manufacturers, 
+are not feasible, is largely refuted because the plugins that implement legal regulations are immediately available throughout 
+the entire supply chain tree upon completion. The discussion then focuses much more on the technical content of regulations 
+rather than the costs and feasibility of implementation.
+
+As one of the world's most important economic and value alliances, the EU maintains economic relationships worldwide and 
+has trade agreements with other nations and alliances. Therefore, the EU should provide the means for the development and 
+operation of SCT, for example, within the framework of the "EU Green Deal," and thus retain sovereignty over the system. 
+The EU would then have a powerful tool at its disposal to quickly implement and enforce legal regulations. For example, 
+a new limit for lead in products could be rolled out in just a few days. Manufacturers could quickly identify potential 
+issues with the limit from which supply branches and adjust their products by selecting alternative supplier products.
+
+Manufacturers usually present their products in the best possible light. With SCT, this can now also be documented and 
+traced back to the suppliers. Those who are not transparent in this regard have to fear for their market share, and 
+those who provide inaccurate information risk losing their credibility.
+
+With SCT and the SCT Multi-Score Label, as a consumer, I have the opportunity to incorporate more criteria and aspects 
+into my purchasing decision. I can choose to utilize it or not. I can infer the best value for money from the product 
+properties or, if I can afford it, also consider resource consumption and social responsibility.
+
+The depth and comprehensiveness of the supply chain coverage depend largely on the entry threshold for smaller suppliers 
+and foreign suppliers. If SCT establishes itself as a cost-effective standard within the EU and opportunities are created 
+for companies outside the EU to operate SCT instances cost-effectively, SCT could quickly spread worldwide. On the other hand, 
+a proprietary solution to the problem that aims to make as much money as possible may be a successful business model, 
+but it is unlikely to achieve the goal of comprehensive supply chain transparency. Closed product development of a company 
+incurs costs in development and marketing and would need to be refinanced through fees from manufacturers, which would 
+hinder its widespread adoption.
+
+Therefore, as Micromata, we also strive for public implementation and financing of SCT and hope to make an important 
+contribution with our expertise in software development. We believe that only through cost-effective provision by the 
+public sector can the urgently needed reach be achieved in a short period. The recent news regarding the progress of 
+climate change clearly shows that we do not have much time left to counteract it.
