@@ -116,7 +116,12 @@ authors:
     shortdesc:    Having fun by building infrastructure and applications for manufacturing and logistics.
     avatar:       avatar-default.jpg
     email:        h.trinter(at)micromata.de
-
+  sfast:
+    name:         Stefan Fast
+    title:        Software Developer and Cloud Engineer
+    shortdesc:    Tools and Automation!
+    avatar:       avatar-default.jpg
+    email:        s.fast(at)micromata.de
 
 
 # Social icons displayed in footer
