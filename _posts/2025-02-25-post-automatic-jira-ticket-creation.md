@@ -6,9 +6,6 @@ tags: [jira]
 shortdesc: Erstelle automatisch Jira Tickets mit der Jira REST-API.
 ---
 
-# Automatisierung von Jira-Tickets mit der REST-API und Python
-
-## Einleitung
 Jira bietet eine leistungsstarke REST-API, mit der sich Aufgaben wie das Erstellen, Bearbeiten und Aktualisieren von Tickets automatisieren lassen.  
 In diesem Beitrag zeigen wir, wie das Python-Skript **"Jira Ticket Updater"** verwendet werden kann, um automatisch die Priorität aus einer Excel-Tabelle in Jira-Tickets zu übertragen.  
 
