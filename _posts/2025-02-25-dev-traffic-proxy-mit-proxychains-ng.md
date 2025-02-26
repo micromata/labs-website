@@ -29,10 +29,12 @@ Selbst wenn ein Broker über Service Discovery zusätzliche DNS-Namen bereitstel
 
 ### Installation der Tools
 
-- [`proxychains-ng`](https://github.com/rofl0r/proxychains-ng): `brew install proxychains-ng`
+- [`proxychains-ng`](https://github.com/rofl0r/proxychains-ng)
+  - `brew install proxychains-ng`
   - Leitet den Traffic von lokalen Anwendungen durch einen Proxy.
   - Nach der Installation ist `proxychains4` als Befehl verfügbar.
-- [`shadowsocks-rust`](https://github.com/shadowsocks/shadowsocks-rust): `brew install shadowsocks-rust`
+- [`shadowsocks-rust`](https://github.com/shadowsocks/shadowsocks-rust)
+  - `brew install shadowsocks-rust`
   - Ein schneller und sicherer Proxy-Server und -Client.
 
 **Optional**:
