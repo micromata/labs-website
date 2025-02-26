@@ -3,20 +3,26 @@ title: Development Traffic Proxy mit ProxyChains-NG
 author: sfast
 categories: [Quick Tips]
 tags: [tools, dev, proxychains]
-shortdesc: TBD
+shortdesc: Leite den gesamten Traffic einer Anwendung mit proxychains-ng durch einen Proxy.
 ---
 
-Dieser Blogpost zeigt, wie mit `proxychains-ng` der gesamte Traffic eines Programms durch einen Proxy geleitet werden kann. 
+**Schneller testen, weniger deployen**. 
+Anstatt auf die Pipeline zu warten, einfach `proxychains-ng` verwenden, um lokale Anwendungen direkt mit entfernten Services zu verbinden.
+Mit `proxychains-ng` lässt sich der gesamte Traffic eines Programms über einen Proxy umleiten.
 Anhand eines Kubernetes-Clusters wird demonstriert, wie lokale Anwendungen auf Services im Cluster zugreifen können – ohne Warten auf die Pipeline und aufwändiges Deployment.
 
 ## Einführung
 
-Beim Entwickeln von Anwendungen, die auf externe Systeme wie APIs, Datenbanken und Message Queues wie Kafka zugreifen, sind lokale Tests und Debugging gegen diese externen Systeme oft umständlich. 
-Ein `kubectl port-forward` reicht nicht immer aus, da viele Systeme zusätzliche DNS-Namen verwenden, die lokal nicht aufgelöst werden können. 
-Hier hilft **`proxychains-ng`**, indem es den Traffic der lokalen Anwendung durch einen Proxy im Cluster leitet.
+Beim Entwickeln von Anwendungen, die auf externe Systeme wie APIs, Datenbanken oder Message Queues (z. B. Kafka) zugreifen, sind lokale Tests oft problematisch. 
+`kubectl port-forward` hilft in vielen Fällen, aber nicht immer – insbesondere, wenn Dienste zusätzliche DNS-Namen nutzen, die lokal nicht auflösbar sind.
 
-Dieser Post zeigt ein Beispiel mit einem **Kafka Consumer**, der lokal entwickelt wird, aber Nachrichten aus einem Kubernetes-Cluster konsumiert. 
-Dank `proxychains-ng` kann die Anwendung direkt auf den Kafka-Service im Cluster zugreifen – ohne jedes Mal ein Docker-Image bauen und deployen zu müssen.
+Hier kommt **`proxychains-ng`** ins Spiel. 
+Es leitet den gesamten Traffic einer lokalen Anwendung durch einen Proxy im Cluster und ermöglicht so den direkten Zugriff auf entfernte Services.
+
+Ein einfaches Beispiel zeigt, wie ein `curl`-Befehl direkt auf einen Service im Kubernetes-Cluster zugreift. 
+Dieselbe Technik funktioniert auch für komplexere Szenarien: 
+Eine lokal gestartete Java-Anwendung mit einem Kafka-Consumer kann sich nahtlos mit einem Kafka-Broker im Cluster verbinden und dort Nachrichten konsumieren – ohne jedes Mal ein Docker-Image bauen und deployen zu müssen.
+Selbst wenn ein Broker über Service Discovery zusätzliche DNS-Namen bereitstellt, die normalerweise nur innerhalb des Clusters auflösbar sind, werden auch diese Verbindungen über `proxychains-ng` nahtlos umgeleitet.
 
 ## Setup
 
@@ -24,7 +30,7 @@ Dank `proxychains-ng` kann die Anwendung direkt auf den Kafka-Service im Cluster
 
 - [`proxychains-ng`](https://github.com/rofl0r/proxychains-ng) 
   - Leitet den Traffic von lokalen Anwendungen durch einen Proxy.
-  - Der nach der Installation verfügbare Befehl heißt `proxychains4`.
+  - Nach der Installation ist `proxychains4` als Befehl verfügbar.
 - [`shadowsocks-rust`](https://github.com/shadowsocks/shadowsocks-rust) 
   - Ein schneller und sicherer Proxy-Server und -Client.
 
@@ -48,7 +54,7 @@ socks5  127.0.0.1 1080
 ```
 - **`dynamic_chain`**: Verwendet die Proxys in der angegebenen Reihenfolge.
 - **`proxy_dns`**: Sorgt dafür, dass DNS-Anfragen ebenfalls durch den Proxy gehen.
-- **Timeouts:** TCP-Timeouts in Millisekunden.
+- **Timeouts:** Die TCP-Timeouts sind in Millisekunden angegeben.
 
 ## Verwendung
 
@@ -85,16 +91,16 @@ spec:
 
 - Der Pod startet einen **Shadowsocks-Proxy** auf Port 4444.
 - Mit `-U` wird UDP (für DNS Anfragen) aktiviert.
-- Anstelle von `my-shadowsocks-password` sollte ein sicheres Passwort verwendet werden.
+- `my-shadowsocks-password` sollte durch ein sicheres Passwort ersetzt werden.
 
-Der Pod kann dann wie folgt im Cluster deployed werden:
+Der Pod wird mit folgendem Befehl im Cluster deployed:
 ```bash
 kubectl apply -f shadowsocks.yaml
 ```
 
 ### Verbindung zum Proxy herstellen
 
-1. **Port-Forwarding** von Kubernetes auf die lokale Maschine:
+1. **Port-Forwarding** vom Kubernetes-Cluster auf die lokale Maschine:
 ```bash
 kubectl port-forward shadowsocks-proxy 4444:4444
 ```
@@ -102,8 +108,8 @@ kubectl port-forward shadowsocks-proxy 4444:4444
 ```bash
 sslocal -b 127.0.0.1:1080 -s 127.0.0.1:4444 -k my-shadowsocks-password -m aes-256-gcm -U --tcp-fast-open
 ```
-- Der Client lauscht lokal auf **Port 1080** und leitet Anfragen an den Shadowsocks-Server im Cluster weiter.
-- Das Passwort muss mit dem im Pod definierten Passwort übereinstimmen.
+- Der Client läuft auf **Port 1080** und leitet Anfragen an den Shadowsocks-Server im Cluster weiter.
+- Das Passwort muss mit dem in der Pod-Definition festgelegten Passwort übereinstimmen.
 
 ### Traffic durch den Proxy leiten
 
@@ -132,18 +138,24 @@ curl http://some-kubernetes-service:8080
 ```
 
 #### Eigene Anwendungen durch den Proxy starten
+
+Eine in Spring Boot geschriebene Java-Anwendung mit Gradle kann beispielsweise wie folgt durch den Proxy gestartet werden:
 ```bash
-proxychains4 ./my-kafka-consumer
+proxychains4 ./gradlew bootRun
 ```
-- Der Kafka-Consumer verbindet sich jetzt direkt mit dem Kafka-Cluster im Kubernetes-Cluster – ohne zusätzliches Deployment.
+Analog für Maven:
+```bash
+proxychains4 mvn spring-boot:run
+```
 
 ## Limitierungen
-- **macOS:** Vorinstallierte System-Tools wie `curl` funktionieren nicht, da `proxychains-ng` aufgrund von SIP (System Integrity Protection) die Bibliotheken nicht einhängen kann.
-  - Viele vorinstallierte Tools wie `curl` können jedoch auch beispielsweise mit `brew` (also zum Beispiel `brew install curl`) installiert werden und werden dann nicht durch SIP beeinträchtigt. 
+- **macOS:** Vorinstallierte System-Tools wie `curl` funktionieren nicht, weil `proxychains-ng` aufgrund von SIP (System Integrity Protection) keine Bibliotheken einhängen kann.
+  - Viele vorinstallierte Tools wie `curl` lassen sich mit `brew` (`brew install curl`) installieren und sind dann nicht von SIP betroffen.
 - **Statisch gelinkte Binaries** funktionieren nicht, da `proxychains-ng` die `libc`-Bibliothek nutzt.
   - Für die meisten Anwendungen ist dies kein Problem.
     - Kotlin, Java, Rust, Node, Python, Ruby und viele andere Sprachen erzeugen Anwendungen, die `libc` verwenden und dynamisch gelinkt sind.
-  - In **Go** entwickelte Anwendungen sind standardmäßig statisch gelinkt. Es gibt jedoch Möglichkeiten so zu bauen, dass dynamisch gelinkt Binaries erzeugt werden:
+  - In **Go** entwickelte Anwendungen sind normalerweise statisch gelinkt. 
+    Mit bestimmten Einstellungen können jedoch dynamisch gelinkte Binaries erstellt werden:
     - Entweder durch Hinzufügen folgendes Imports:
       ```go
       import "C"
@@ -161,12 +173,12 @@ Es existiert ein weiteres cooles Tool, das nicht von den [Limitierungen](#limiti
 
 Wenn der Hauptanwendungsfall das Leiten des Traffics einer Anwendung von der lokalen Maschine in und aus einem Kubernetes Cluster ist, dann eignet sich das Tool [`mirrord`](https://github.com/metalbear-co/mirrord).
 `mirrord` automatisiert viele der bei `proxychains-ng` manuell durchzuführenden Schritte und ist speziell für den Einsatz in Kubernetes-Clustern entwickelt.
-Das Tool ist für alle gängigen Betriebssysteme verfügbar und bietet viele nützliche Features, wie zum Beispiel das Spiegeln von Traffic eines Pods im Kubernetes Cluster in eine Anwendung auf der lokalen Maschine.
+Das Tool läuft auf allen gängigen Betriebssystemen und ermöglicht unter anderem das Spiegeln des Traffics eines Kubernetes-Pods in eine lokale Anwendung.
 
 ## Fazit
 Mit `proxychains-ng` lässt sich der Traffic von lokalen Anwendungen schnell und einfach über einen Proxy in entfernte Systeme leiten.
-Das spart Zeit beim Entwickeln und Testen – ohne langwierige Warten auf die Pipeline und Deployments. 
+Das spart Zeit beim Entwickeln und Testen – ohne langwieriges Warten auf die Pipeline und Deployments. 
 
 ---
 
-Wenn du weitere Use Cases oder Tipps zu `proxychains-ng` kennst, lass es uns gerne wissen! 🚀
+Wenn du weitere Use Cases oder Tipps zu `proxychains-ng` und ähnliche Tools kennst, lass es uns gerne wissen! 🚀
