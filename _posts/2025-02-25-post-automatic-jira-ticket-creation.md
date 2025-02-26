@@ -6,8 +6,9 @@ tags: [jira]
 shortdesc: Erstelle und bearbeite automatisch Jira Tickets mit der Jira REST-API.
 ---
 
-Jira bietet eine leistungsstarke REST-API, mit der sich Aufgaben wie das Erstellen, Bearbeiten und Aktualisieren von Tickets automatisieren lassen.  
-In diesem Beitrag zeigen wir, wie das Python-Skript **"Jira Ticket Updater"** verwendet werden kann, um automatisch die Priorität aus einer Excel-Tabelle in Jira-Tickets zu übertragen.  
+Jira bietet eine umfangreiche REST-API, mit der sich Aufgaben wie das Erstellen, Bearbeiten und Aktualisieren von Tickets automatisieren lassen.  
+In diesem Beitrag zeigen wir, wie man mit einem Python-Skript automatisch Jira-Tickets anpasst.
+Das Skript überträgt automatisch die Prioritäten aus einer Excel-Tabelle in die Tickets.
 
 ## Vorteile der Automatisierung
 - **Zeitersparnis:** Manuelle Eingaben werden minimiert.  
@@ -15,27 +16,27 @@ In diesem Beitrag zeigen wir, wie das Python-Skript **"Jira Ticket Updater"** ve
 - **Effizienz:** Mehrere Tickets können in einem Durchlauf aktualisiert werden.  
 
 ## Was kann man damit machen?
-Die Jira REST Api ist sehr groß und im folgenden werden nur Beispiele gezeigt die für einen leichten einstieg geeignet sind
-**1.Tickets abrufen**
+Die Jira REST Api ist sehr groß und im folgenden werden nur Beispiele gezeigt die für einen leichten einstieg geeignet sind.
+
+**1. Tickets abrufen**
 Mit einer GET-Anfrage lassen sich die Informationen zu Tickets einfach von der Jira REST API abrufen. Die JSON-Antwort enthält Ticketdetails wie ID, Status und Beschreibung.  
 
-```GET /rest/api/3/issue/{issueIdOrKey} ```
-Quelle: https://developer.atlassian.com/cloud/jira/platform/rest/v3/api-group-issues/#api-rest-api-3-issue-issueidorkey-get
+```GET /rest/api/3/issue/{issueIdOrKey} ```[^1]
+[^1]: Quelle: [Jira REST API](https://developer.atlassian.com/cloud/jira/platform/rest/v3/api-group-issues/#api-rest-api-3-issue-issueidorkey-get)
 
 **2. Tickets erstellen**
-Bei einer POST-Anfrage können die Jira-Ticket-Properties als JSON-Payload mitgegeben werden. Dabei ist es beispielsweise möglich, in der Ticket-Beschreibung eigene Jira-Befehle zu verwenden, um Elemente wie Panels und andere Formatierungen zu erstellen. Die Antwort liefert die ID des erstellten Tickets.  
-```POST /rest/api/3/issue```
+Bei einer POST-Anfrage können die Jira-Ticket-Properties als JSON-Payload mitgegeben werden. Dabei ist es beispielsweise möglich, in der Ticket-Beschreibung eigene Jira-Befehle zu verwenden, um Elemente wie Panels und andere Formatierungen zu erstellen. Die Antwort liefert die ID des erstellten Tickets.
+
+```POST /rest/api/3/issue```[^2]
 ```json
-  {
     "fields": {
       "project": {"key": "Porject"},
       "summary": "Automatisch erstelltes Ticket",
       "description": "Dieses Ticket wurde via REST API erstellt.",
       "issuetype": {"name": "Task"}
     }
-  }
-  ```
-Quelle: https://developer.atlassian.com/cloud/jira/platform/rest/v3/api-group-issues/#api-rest-api-3-issue-post
+```
+[^2]: Quelle: [Jira REST API](https://developer.atlassian.com/cloud/jira/platform/rest/v3/api-group-issues/#api-rest-api-3-issue-post)
 
 **3. Tickets aktualisieren**  
 - Statusänderungen, Kommentare oder Feldanpassungen erfolgen per PUT-Anfrage.  
@@ -50,8 +51,8 @@ Quelle: https://developer.atlassian.com/cloud/jira/platform/rest/v3/api-group-is
 **4. Jira-Tickets zwischen Instanzen synchronisieren**  
 - Tickets können zwischen zwei Jira-Instanzen übertragen werden, indem die REST API der Quell- und Zielinstanz kombiniert genutzt wird.  
 - Workflow:  
-  - Ticketdetails mit GET von der Quellinstanz abrufen.  
-  - Ticket mit POST in der Zielinstanz neu erstellen.  
+  - Ticketdetails mit `GET` von der Quellinstanz abrufen.  
+  - Ticket mit `POST` in der Zielinstanz neu erstellen.  
 
 **5. Informationen zu benutzerdefinierten Feldern abrufen**
 - Um die verfügbaren benutzerdefinierten Felder und deren Feld-IDs zu ermitteln, kann die folgende API-Anfrage genutzt werden:  
@@ -129,7 +130,7 @@ for index, row in df.iterrows():
 print("Tickets wurden erfolgreich aktualisiert.")
 ```
 
-Beispiel TicketPrioritaetUpdate Excel Tabelle:
+Beispiel `TicketPrioritaetUpdate` Excel Tabelle:
 ```markdown
 | Ticket   | Priority | Description                      |
 |----------|----------|----------------------------------|
