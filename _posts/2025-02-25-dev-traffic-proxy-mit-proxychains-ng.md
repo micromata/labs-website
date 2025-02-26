@@ -14,7 +14,7 @@ Anhand eines Kubernetes-Clusters wird demonstriert, wie lokale Anwendungen auf S
 
 ## Einführung
 
-Beim Entwickeln von Anwendungen, die auf externe Systeme wie APIs, Datenbanken oder Message Queues (z. B. Kafka) zugreifen, sind lokale Tests oft problematisch. 
+Beim Entwickeln von Anwendungen, die auf externe Systeme wie APIs, Datenbanken oder Message Queues (beispielsweise Kafka) zugreifen, sind lokale Tests oft problematisch. 
 `kubectl port-forward` hilft in vielen Fällen, aber nicht immer – insbesondere, wenn Dienste zusätzliche DNS-Namen nutzen, die lokal nicht auflösbar sind.
 
 Hier kommt **`proxychains-ng`** ins Spiel. 
