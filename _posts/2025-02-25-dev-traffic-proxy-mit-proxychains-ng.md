@@ -9,6 +9,7 @@ shortdesc: Leite den gesamten Traffic einer Anwendung mit proxychains-ng durch e
 **Schneller testen, weniger deployen**. 
 Anstatt auf die Pipeline zu warten, einfach `proxychains-ng` verwenden, um lokale Anwendungen direkt mit entfernten Services zu verbinden.
 Mit `proxychains-ng` lässt sich der gesamte Traffic eines Programms über einen Proxy umleiten.
+
 Anhand eines Kubernetes-Clusters wird demonstriert, wie lokale Anwendungen auf Services im Cluster zugreifen können – ohne Warten auf die Pipeline und aufwändiges Deployment.
 
 ## Einführung
