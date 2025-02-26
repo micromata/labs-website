@@ -169,8 +169,8 @@ proxychains4 mvn spring-boot:run
 ## Ausblick
 
 Es existiert ein weiteres cooles Tool, das nicht von den [Limitierungen](#limitierungen) von `proxychains-ng` betroffen ist: [`cproxy`](https://github.com/NOBLES5E/cproxy).
-`cproxy` verwendet `cgroup` und `iptables`, um den Traffic durch einen Proxy zu leiten.
-`cgroup` und `iptables` sind Linux Features und daher ist `cproxy` aktuell **nur für Linux-Systeme** verfügbar.
+Es nutzt `cgroup` und `iptables`, um den gesamten Netzwerkverkehr über einen Proxy zu leiten. 
+Da beide Technologien Linux-spezifisch sind, ist `cproxy` derzeit **ausschließlich für Linux-Systeme** verfügbar.
 
 Wenn der Hauptanwendungsfall das Leiten des Traffics einer Anwendung von der lokalen Maschine in und aus einem Kubernetes Cluster ist, dann eignet sich das Tool [`mirrord`](https://github.com/metalbear-co/mirrord).
 `mirrord` automatisiert viele der bei `proxychains-ng` manuell durchzuführenden Schritte und ist speziell für den Einsatz in Kubernetes-Clustern entwickelt.
