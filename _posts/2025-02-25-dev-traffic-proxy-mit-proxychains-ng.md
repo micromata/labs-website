@@ -38,8 +38,9 @@ Selbst wenn ein Broker über Service Discovery zusätzliche DNS-Namen bereitstel
   - Ein schneller und sicherer Proxy-Server und -Client.
 
 **Optional**:
-- [`k3d`](https://k3d.io/): `brew install k3d`
-  -  Zum Erstellen eines lokalen Kubernetes-Clusters, um die Beispiele auszuprobieren.
+- [`k3d`](https://k3d.io/)
+  - `brew install k3d`
+  - Zum Erstellen eines lokalen Kubernetes-Clusters, um die Beispiele auszuprobieren.
 
 ### Konfiguration von `proxychains-ng`
 
