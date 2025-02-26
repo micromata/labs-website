@@ -140,7 +140,7 @@ curl http://some-kubernetes-service:8080
 
 #### Eigene Anwendungen durch den Proxy starten
 
-Eine in Spring Boot geschriebene Java-Anwendung mit Gradle kann beispielsweise wie folgt durch den Proxy gestartet werden:
+Eine in Java oder Kotlin geschriebene Spring Boot Anwendung mit dem Build-Tool Gradle kann beispielsweise wie folgt durch den Proxy gestartet werden:
 ```bash
 proxychains4 ./gradlew bootRun
 ```
