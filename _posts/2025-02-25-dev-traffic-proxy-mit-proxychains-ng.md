@@ -56,9 +56,9 @@ tcp_connect_time_out 8000
 [ProxyList]
 socks5  127.0.0.1 1080
 ```
-- **`dynamic_chain`**: Verwendet die Proxys in der angegebenen Reihenfolge.
-- **`proxy_dns`**: Sorgt dafür, dass DNS-Anfragen ebenfalls durch den Proxy gehen.
-- **Timeouts:** Die TCP-Timeouts sind in Millisekunden angegeben.
+- `dynamic_chain`: Verwendet die Proxys in der angegebenen Reihenfolge.
+- `proxy_dns`: Sorgt dafür, dass DNS-Anfragen ebenfalls durch den Proxy gehen.
+- `tcp_*_time_out`: Die TCP-Timeouts sind in Millisekunden angegeben.
 
 ## Verwendung
 
@@ -169,7 +169,7 @@ proxychains4 mvn spring-boot:run
       go build -ldflags='-linkmode external'
       ```
 
-## Ausblick
+## Related Tools
 
 Es existiert ein weiteres cooles Tool, das nicht von den [Limitierungen](#limitierungen) von `proxychains-ng` betroffen ist: [`cproxy`](https://github.com/NOBLES5E/cproxy).
 Es nutzt `cgroup` und `iptables`, um den gesamten Netzwerkverkehr über einen Proxy zu leiten. 
