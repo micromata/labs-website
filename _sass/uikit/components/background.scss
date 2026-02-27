@@ -9,10 +9,6 @@
 // Variables
 // ========================================================================
 
-$background-default-background:                  $global-background !default;
-$background-muted-background:                    $global-muted-background !default;
-$background-primary-background:                  $global-primary-background !default;
-$background-secondary-background:                $global-secondary-background !default;
 
 
 /* ========================================================================
@@ -69,15 +65,7 @@ $background-secondary-background:                $global-secondary-background !d
 /* Attachment
  ========================================================================== */
 
-/*
- * 1. Fix bug introduced in Chrome 67: the background image is not visible if any element on the page uses `translate3d`
- */
-
-.uk-background-fixed {
-    background-attachment: fixed;
-    /* 1 */
-    backface-visibility: hidden;
-}
+.uk-background-fixed { background-attachment: fixed; }
 
 /*
  * Exclude touch devices because `fixed` doesn't work on iOS and Android

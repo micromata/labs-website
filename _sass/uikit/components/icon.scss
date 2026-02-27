@@ -15,22 +15,10 @@
 // Variables
 // ========================================================================
 
-$icon-image-size:                                20px !default;
 
-$icon-link-color:                                $global-muted-color !default;
-$icon-link-hover-color:                          $global-color !default;
-$icon-link-active-color:                         darken($global-color, 5%) !default;
 
-$icon-button-size:                               36px !default;
-$icon-button-border-radius:                      500px !default;
-$icon-button-background:                         $global-muted-background !default;
-$icon-button-color:                              $global-muted-color !default;
 
-$icon-button-hover-background:                   darken($icon-button-background, 5%) !default;
-$icon-button-hover-color:                        $global-color !default;
 
-$icon-button-active-background:                  darken($icon-button-background, 10%) !default;
-$icon-button-active-color:                       $global-color !default;
 
 
 /* ========================================================================
@@ -92,14 +80,14 @@ button.uk-icon:not(:disabled) { cursor: pointer; }
  * Set the fill and stroke color of all SVG elements to the current text color
  */
 
-.uk-icon:not(.uk-preserve) [fill*='#']:not(.uk-preserve) { fill: currentcolor; }
-.uk-icon:not(.uk-preserve) [stroke*='#']:not(.uk-preserve) { stroke: currentcolor; }
+.uk-icon:not(.uk-preserve) [fill*="#"]:not(.uk-preserve) { fill: currentcolor; }
+.uk-icon:not(.uk-preserve) [stroke*="#"]:not(.uk-preserve) { stroke: currentcolor; }
 
 /*
  * Fix Firefox blurry SVG rendering: https://bugzilla.mozilla.org/show_bug.cgi?id=1046835
  */
 
-.uk-icon > * { transform: translate(0,0); }
+.uk-icon > * { transform: translate(0, 0); }
 
 
 /* Image modifier
@@ -205,15 +193,6 @@ button.uk-icon:not(:disabled) { cursor: pointer; }
 // Inverse
 // ========================================================================
 
-$inverse-icon-link-color:                       $inverse-global-muted-color !default;
-$inverse-icon-link-hover-color:                 $inverse-global-color !default;
-$inverse-icon-link-active-color:                $inverse-global-color !default;
-$inverse-icon-button-background:                $inverse-global-muted-background !default;
-$inverse-icon-button-color:                     $inverse-global-muted-color !default;
-$inverse-icon-button-hover-background:          fade-in($inverse-icon-button-background, 0.05) !default;
-$inverse-icon-button-hover-color:               $inverse-global-color !default;
-$inverse-icon-button-active-background:         fade-in($inverse-icon-button-background, 0.1) !default;
-$inverse-icon-button-active-color:              $inverse-global-color !default;
 
 
 
