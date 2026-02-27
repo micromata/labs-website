@@ -10,6 +10,7 @@
 //
 // Modifier:        `uk-search-default`
 //                  `uk-search-navbar`
+//                  `uk-search-medium`
 //                  `uk-search-large`
 //
 // ========================================================================
@@ -18,38 +19,16 @@
 // Variables
 // ========================================================================
 
-$search-color:                                       $global-color !default;
-$search-placeholder-color:                           $global-muted-color !default;
 
-$search-icon-color:                                  $global-muted-color !default;
 
-$search-default-width:                               240px !default;
-$search-default-height:                              $global-control-height !default;
-$search-default-padding-horizontal:                  10px !default;
-$search-default-background:                          $global-muted-background !default;
-$search-default-focus-background:                    darken($search-default-background, 5%) !default;
 
-$search-default-icon-width:                          $global-control-height !default;
-$search-default-icon-padding:                        0 !default;
 
-$search-navbar-width:                                400px !default;
-$search-navbar-height:                               40px !default;
-$search-navbar-background:                           transparent !default;
-$search-navbar-font-size:                            $global-large-font-size !default;
 
-$search-navbar-icon-width:                           40px !default;
-$search-navbar-icon-padding:                         0 !default;
 
-$search-large-width:                                 500px !default;
-$search-large-height:                                80px !default;
-$search-large-background:                            transparent !default;
-$search-large-font-size:                             $global-2xlarge-font-size !default;
 
-$search-large-icon-width:                            80px !default;
-$search-large-icon-padding:                          0 !default;
 
-$search-toggle-color:                                $global-muted-color !default;
-$search-toggle-hover-color:                          $global-color !default;
+
+
 
 
 /* ========================================================================
@@ -208,8 +187,8 @@ $search-toggle-hover-color:                          $global-color !default;
 
 .uk-search-default .uk-search-icon { width: $search-default-icon-width; }
 
-.uk-search-default .uk-search-icon:not(.uk-search-icon-flip) ~ .uk-search-input { padding-left: ($search-default-icon-width + $search-default-icon-padding); }
-.uk-search-default .uk-search-icon-flip ~ .uk-search-input { padding-right: ($search-default-icon-width + $search-default-icon-padding); }
+.uk-search-default:has(.uk-search-icon:not(.uk-search-icon-flip)) .uk-search-input { padding-left: ($search-default-icon-width + $search-default-icon-padding); }
+.uk-search-default:has(.uk-search-icon-flip) .uk-search-input { padding-right: ($search-default-icon-width + $search-default-icon-padding); }
 
 
 /* Navbar modifier
@@ -223,13 +202,15 @@ $search-toggle-hover-color:                          $global-color !default;
 
 .uk-search-navbar .uk-search-input {
     height: $search-navbar-height;
+    padding-left: $search-navbar-padding-horizontal;
+    padding-right: $search-navbar-padding-horizontal;
     background: $search-navbar-background;
-    font-size: $search-navbar-font-size;
     @if(mixin-exists(hook-search-navbar-input)) {@include hook-search-navbar-input();}
 }
 
 /* Focus */
 .uk-search-navbar .uk-search-input:focus {
+    background-color: $search-navbar-focus-background;
     @if(mixin-exists(hook-search-navbar-input-focus)) {@include hook-search-navbar-input-focus();}
 }
 
@@ -239,8 +220,39 @@ $search-toggle-hover-color:                          $global-color !default;
 
 .uk-search-navbar .uk-search-icon { width: $search-navbar-icon-width; }
 
-.uk-search-navbar .uk-search-icon:not(.uk-search-icon-flip) ~ .uk-search-input { padding-left: ($search-navbar-icon-width + $search-navbar-icon-padding); }
-.uk-search-navbar .uk-search-icon-flip ~ .uk-search-input { padding-right: ($search-navbar-icon-width + $search-navbar-icon-padding); }
+.uk-search-navbar:has(.uk-search-icon:not(.uk-search-icon-flip)) .uk-search-input { padding-left: ($search-navbar-icon-width + $search-navbar-icon-padding); }
+.uk-search-navbar:has(.uk-search-icon-flip) .uk-search-input { padding-right: ($search-navbar-icon-width + $search-navbar-icon-padding); }
+
+
+/* Medium modifier
+ ========================================================================== */
+
+.uk-search-medium { width: $search-medium-width; }
+
+/*
+ * Input
+ */
+
+.uk-search-medium .uk-search-input {
+    height: $search-medium-height;
+    background: $search-medium-background;
+    font-size: $search-medium-font-size;
+    @if(mixin-exists(hook-search-medium-input)) {@include hook-search-medium-input();}
+}
+
+/* Focus */
+.uk-search-medium .uk-search-input:focus {
+    @if(mixin-exists(hook-search-medium-input-focus)) {@include hook-search-medium-input-focus();}
+}
+
+/*
+ * Icon
+ */
+
+.uk-search-medium .uk-search-icon { width: $search-medium-icon-width; }
+
+.uk-search-medium:has(.uk-search-icon:not(.uk-search-icon-flip)) .uk-search-input { padding-left: ($search-medium-icon-width + $search-medium-icon-padding); }
+.uk-search-medium:has(.uk-search-icon-flip) .uk-search-input { padding-right: ($search-medium-icon-width + $search-medium-icon-padding); }
 
 
 /* Large modifier
@@ -270,8 +282,8 @@ $search-toggle-hover-color:                          $global-color !default;
 
 .uk-search-large .uk-search-icon { width: $search-large-icon-width; }
 
-.uk-search-large .uk-search-icon:not(.uk-search-icon-flip) ~ .uk-search-input { padding-left: ($search-large-icon-width + $search-large-icon-padding); }
-.uk-search-large .uk-search-icon-flip ~ .uk-search-input { padding-right: ($search-large-icon-width + $search-large-icon-padding); }
+.uk-search-large:has(.uk-search-icon:not(.uk-search-icon-flip)) .uk-search-input { padding-left: ($search-large-icon-width + $search-large-icon-padding); }
+.uk-search-large:has(.uk-search-icon-flip) .uk-search-input { padding-right: ($search-large-icon-width + $search-large-icon-padding); }
 
 
 /* Toggle
@@ -300,6 +312,8 @@ $search-toggle-hover-color:                          $global-color !default;
 // @mixin hook-search-default-input-focus(){}
 // @mixin hook-search-navbar-input(){}
 // @mixin hook-search-navbar-input-focus(){}
+// @mixin hook-search-medium-input(){}
+// @mixin hook-search-medium-input-focus(){}
 // @mixin hook-search-large-input(){}
 // @mixin hook-search-large-input-focus(){}
 
@@ -312,20 +326,12 @@ $search-toggle-hover-color:                          $global-color !default;
 // Inverse
 // ========================================================================
 
-$inverse-search-color:                          $inverse-global-color !default;
-$inverse-search-placeholder-color:              $inverse-global-muted-color !default;
 
-$inverse-search-icon-color:                     $inverse-global-muted-color !default;
 
-$inverse-search-default-background:             $inverse-global-muted-background !default;
-$inverse-search-default-focus-background:       fade-in($inverse-search-default-background, 0.05) !default;
 
-$inverse-search-navbar-background:              transparent !default;
 
-$inverse-search-large-background:               transparent !default;
 
-$inverse-search-toggle-color:                   $inverse-global-muted-color !default;
-$inverse-search-toggle-hover-color:             $inverse-global-color !default;
+
 
 
 
@@ -333,6 +339,8 @@ $inverse-search-toggle-hover-color:             $inverse-global-color !default;
 // @mixin hook-inverse-search-default-input-focus(){}
 // @mixin hook-inverse-search-navbar-input(){}
 // @mixin hook-inverse-search-navbar-input-focus(){}
+// @mixin hook-inverse-search-medium-input(){}
+// @mixin hook-inverse-search-medium-input-focus(){}
 // @mixin hook-inverse-search-large-input(){}
 // @mixin hook-inverse-search-large-input-focus(){}
 // @mixin hook-inverse-search-toggle(){}

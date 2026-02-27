@@ -31,30 +31,12 @@
 // Variables
 // ========================================================================
 
-$panel-scrollable-height:                        170px !default;
-$panel-scrollable-padding:                       10px !default;
-$panel-scrollable-border-width:                  $global-border-width !default;
-$panel-scrollable-border:                        $global-border !default;
 
-$border-rounded-border-radius:                   5px !default;
 
-$box-shadow-duration:                            0.1s !default;
 
-$box-shadow-bottom-height:                       30px !default;
-$box-shadow-bottom-bottom:                       (-$box-shadow-bottom-height) !default;
-$box-shadow-bottom-border-radius:                100% !default;
-$box-shadow-bottom-background:                   #444 !default;
-$box-shadow-bottom-blur:                         20px !default;
 
-$dropcap-margin-right:                           10px !default;
-$dropcap-font-size:                              (($global-line-height * 3) * 1em) !default;
 
-$logo-font-size:                                 $global-large-font-size !default;
-$logo-font-family:                               $global-font-family !default;
-$logo-color:                                     $global-emphasis-color !default;
-$logo-hover-color:                               $global-emphasis-color !default;
 
-$dragover-box-shadow:                            0 0 20px rgba(100,100,100,0.3) !default;
 
 
 /* ========================================================================
@@ -126,10 +108,10 @@ $dragover-box-shadow:                            0 0 20px rgba(100,100,100,0.3) 
 .uk-float-right { float: right; }
 
 /* 1 */
-[class*='uk-float-'] { max-width: 100%; }
+[class*="uk-float-"] { max-width: 100%; }
 
 
-/* Overfow
+/* Overflow
  ========================================================================== */
 
 .uk-overflow-hidden { overflow: hidden; }
@@ -179,7 +161,7 @@ $dragover-box-shadow:                            0 0 20px rgba(100,100,100,0.3) 
  * 6. Clip child elements
  */
 
-[class*='uk-inline'] {
+[class*="uk-inline"] {
     /* 1 */
     display: inline-block;
     /* 2 */
@@ -290,7 +272,7 @@ $dragover-box-shadow:                            0 0 20px rgba(100,100,100,0.3) 
  * Fix `overflow: hidden` to be ignored with border-radius and CSS transforms in Webkit
  */
 
-.uk-inline-clip[class*='uk-border-'] { -webkit-transform: translateZ(0); }
+.uk-inline-clip[class*="uk-border-"] { -webkit-transform: translateZ(0); }
 
 
 /* Box-shadow
@@ -305,7 +287,7 @@ $dragover-box-shadow:                            0 0 20px rgba(100,100,100,0.3) 
  * Hover
  */
 
-[class*='uk-box-shadow-hover'] { transition: box-shadow $box-shadow-duration ease-in-out; }
+[class*="uk-box-shadow-hover"] { transition: box-shadow $box-shadow-duration ease-in-out; }
 
 .uk-box-shadow-hover-small:hover { box-shadow: $global-small-box-shadow; }
 .uk-box-shadow-hover-medium:hover { box-shadow: $global-medium-box-shadow; }
@@ -508,8 +490,6 @@ $dragover-box-shadow:                            0 0 20px rgba(100,100,100,0.3) 
 // Inverse
 // ========================================================================
 
-$inverse-logo-color:                            $inverse-global-emphasis-color !default;
-$inverse-logo-hover-color:                      $inverse-global-emphasis-color !default;
 
 
 
