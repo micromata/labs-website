@@ -17,15 +17,7 @@
 // Variables
 // ========================================================================
 
-$container-max-width:                    1200px !default;
-$container-xsmall-max-width:             750px !default;
-$container-small-max-width:              900px !default;
-$container-large-max-width:              1400px !default;
-$container-xlarge-max-width:             1600px !default;
 
-$container-padding-horizontal:           15px !default;
-$container-padding-horizontal-s:         $global-gutter !default;
-$container-padding-horizontal-m:         $global-medium-gutter !default;
 
 
 /* ========================================================================
@@ -149,7 +141,7 @@ $container-padding-horizontal-m:         $global-medium-gutter !default;
  */
 
 .uk-container-item-padding-remove-left,
-.uk-container-item-padding-remove-right { width: unquote('calc(100% + #{$container-padding-horizontal})') }
+.uk-container-item-padding-remove-right { width: unquote('calc(100% + #{$container-padding-horizontal})'); }
 
 .uk-container-item-padding-remove-left { margin-left: (-$container-padding-horizontal); }
 .uk-container-item-padding-remove-right { margin-right: (-$container-padding-horizontal); }
@@ -158,7 +150,7 @@ $container-padding-horizontal-m:         $global-medium-gutter !default;
 @media (min-width: $breakpoint-small) {
 
     .uk-container-item-padding-remove-left,
-    .uk-container-item-padding-remove-right { width: unquote('calc(100% + #{$container-padding-horizontal-s})') }
+    .uk-container-item-padding-remove-right { width: unquote('calc(100% + #{$container-padding-horizontal-s})'); }
 
     .uk-container-item-padding-remove-left { margin-left: (-$container-padding-horizontal-s); }
     .uk-container-item-padding-remove-right { margin-right: (-$container-padding-horizontal-s); }
@@ -169,7 +161,7 @@ $container-padding-horizontal-m:         $global-medium-gutter !default;
 @media (min-width: $breakpoint-medium) {
 
     .uk-container-item-padding-remove-left,
-    .uk-container-item-padding-remove-right { width: unquote('calc(100% + #{$container-padding-horizontal-m})') }
+    .uk-container-item-padding-remove-right { width: unquote('calc(100% + #{$container-padding-horizontal-m})'); }
 
     .uk-container-item-padding-remove-left { margin-left: (-$container-padding-horizontal-m); }
     .uk-container-item-padding-remove-right { margin-right: (-$container-padding-horizontal-m); }

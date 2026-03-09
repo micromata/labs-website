@@ -9,16 +9,13 @@
 // Variables
 // ========================================================================
 
-$height-small-height:                            150px !default;
-$height-medium-height:                           300px !default;
-$height-large-height:                            450px !default;
 
 
 /* ========================================================================
    Component: Height
  ========================================================================== */
 
-[class*='uk-height'] { box-sizing: border-box; }
+[class*="uk-height"] { box-sizing: border-box; }
 
 /*
  * Only works if parent element has a height set

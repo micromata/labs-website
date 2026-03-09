@@ -122,7 +122,12 @@ authors:
     shortdesc:    
     avatar:       avatar-default.jpg
     email:        s.ginter(at)micromata.de
-
+  sfast:
+    name:         Stefan Fast
+    title:        Software Developer and Cloud Engineer
+    shortdesc:    Tools and Automation Enthusiast 🚀
+    avatar:       avatar-default.jpg
+    email:        s.fast(at)micromata.de
 
 
 # Social icons displayed in footer

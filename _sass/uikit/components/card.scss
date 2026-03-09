@@ -25,67 +25,19 @@
 // Variables
 // ========================================================================
 
-$card-body-padding-horizontal:                  $global-gutter !default;
-$card-body-padding-vertical:                    $global-gutter !default;
 
-$card-body-padding-horizontal-l:                $global-medium-gutter !default;
-$card-body-padding-vertical-l:                  $global-medium-gutter !default;
 
-$card-header-padding-horizontal:                $global-gutter !default;
-$card-header-padding-vertical:                  round(($global-gutter * 0.5)) !default;
 
-$card-header-padding-horizontal-l:              $global-medium-gutter !default;
-$card-header-padding-vertical-l:                round(($global-medium-gutter * 0.5)) !default;
 
-$card-footer-padding-horizontal:                $global-gutter !default;
-$card-footer-padding-vertical:                  ($global-gutter * 0.5) !default;
 
-$card-footer-padding-horizontal-l:              $global-medium-gutter !default;
-$card-footer-padding-vertical-l:                round(($global-medium-gutter * 0.5)) !default;
 
-$card-title-font-size:                          $global-large-font-size !default;
-$card-title-line-height:                        1.4 !default;
 
-$card-badge-top:                                15px !default;
-$card-badge-right:                              15px !default;
-$card-badge-height:                             22px !default;
-$card-badge-padding-horizontal:                 10px !default;
-$card-badge-background:                         $global-primary-background !default;
-$card-badge-color:                              $global-inverse-color !default;
-$card-badge-font-size:                          $global-small-font-size !default;
 
-$card-hover-background:                         $global-muted-background !default;
 
-$card-default-background:                       $global-muted-background !default;
-$card-default-color:                            $global-color !default;
-$card-default-title-color:                      $global-emphasis-color !default;
-$card-default-hover-background:                 darken($card-default-background, 5%) !default;
 
-$card-primary-background:                       $global-primary-background !default;
-$card-primary-color:                            $global-inverse-color !default;
-$card-primary-title-color:                      $card-primary-color !default;
-$card-primary-hover-background:                 darken($card-primary-background, 5%) !default;
-$card-primary-color-mode:                       light !default;
 
-$card-secondary-background:                     $global-secondary-background !default;
-$card-secondary-color:                          $global-inverse-color !default;
-$card-secondary-title-color:                    $card-secondary-color !default;
-$card-secondary-hover-background:               darken($card-secondary-background, 5%) !default;
-$card-secondary-color-mode:                     light !default;
 
-$card-small-body-padding-horizontal:            $global-margin !default;
-$card-small-body-padding-vertical:              $global-margin !default;
-$card-small-header-padding-horizontal:          $global-margin !default;
-$card-small-header-padding-vertical:            round(($global-margin * 0.66667)) !default;
-$card-small-footer-padding-horizontal:          $global-margin !default;
-$card-small-footer-padding-vertical:            round(($global-margin * 0.66667)) !default;
 
-$card-large-body-padding-horizontal-l:          $global-large-gutter !default;
-$card-large-body-padding-vertical-l:            $global-large-gutter !default;
-$card-large-header-padding-horizontal-l:        $global-large-gutter !default;
-$card-large-header-padding-vertical-l:          round(($global-large-gutter * 0.5)) !default;
-$card-large-footer-padding-horizontal-l:        $global-large-gutter !default;
-$card-large-footer-padding-vertical-l:          round(($global-large-gutter * 0.5)) !default;
 
 
 /* ========================================================================
@@ -148,13 +100,13 @@ $card-large-footer-padding-vertical-l:          round(($global-large-gutter * 0.
  * Implemented by the theme
  */
 
-[class*='uk-card-media'] {
+[class*="uk-card-media"] {
     @if(mixin-exists(hook-card-media)) {@include hook-card-media();}
 }
 
 .uk-card-media-top,
 .uk-grid-stack > .uk-card-media-left,
-.uk-grid-stack > .uk-card-media-right  {
+.uk-grid-stack > .uk-card-media-right {
     @if(mixin-exists(hook-card-media-top)) {@include hook-card-media-top();}
 }
 
@@ -237,6 +189,7 @@ $card-large-footer-padding-vertical-l:          round(($global-large-gutter * 0.
  */
 
 .uk-card-default {
+    --uk-inverse: #{$card-default-color-mode};
     background-color: $card-default-background;
     color: $card-default-color;
     @if(mixin-exists(hook-card-default)) {@include hook-card-default();}
@@ -260,11 +213,18 @@ $card-large-footer-padding-vertical-l:          round(($global-large-gutter * 0.
     @if(mixin-exists(hook-card-default-footer)) {@include hook-card-default-footer();}
 }
 
+// Color Mode
+@if ( $card-default-color-mode == light ) { .uk-card-default.uk-card-body { @extend .uk-light !optional;} }
+@if ( $card-default-color-mode == light ) { .uk-card-default > :not([class*="uk-card-media"]) { @extend .uk-light !optional;} }
+@if ( $card-default-color-mode == dark ) { .uk-card-default.uk-card-body { @extend .uk-dark !optional;} }
+@if ( $card-default-color-mode == dark ) { .uk-card-default > :not([class*="uk-card-media"]) { @extend .uk-dark !optional;} }
+
 /*
  * Primary
  */
 
 .uk-card-primary {
+    --uk-inverse: #{$card-primary-color-mode};
     background-color: $card-primary-background;
     color: $card-primary-color;
     @if(mixin-exists(hook-card-primary)) {@include hook-card-primary();}
@@ -282,15 +242,16 @@ $card-large-footer-padding-vertical-l:          round(($global-large-gutter * 0.
 
 // Color Mode
 @if ( $card-primary-color-mode == light ) { .uk-card-primary.uk-card-body { @extend .uk-light !optional;} }
-@if ( $card-primary-color-mode == light ) { .uk-card-primary > :not([class*='uk-card-media']) { @extend .uk-light !optional;} }
+@if ( $card-primary-color-mode == light ) { .uk-card-primary > :not([class*="uk-card-media"]) { @extend .uk-light !optional;} }
 @if ( $card-primary-color-mode == dark ) { .uk-card-primary.uk-card-body { @extend .uk-dark !optional;} }
-@if ( $card-primary-color-mode == dark ) { .uk-card-primary > :not([class*='uk-card-media']) { @extend .uk-dark !optional;} }
+@if ( $card-primary-color-mode == dark ) { .uk-card-primary > :not([class*="uk-card-media"]) { @extend .uk-dark !optional;} }
 
 /*
  * Secondary
  */
 
 .uk-card-secondary {
+    --uk-inverse: #{$card-secondary-color-mode};
     background-color: $card-secondary-background;
     color: $card-secondary-color;
     @if(mixin-exists(hook-card-secondary)) {@include hook-card-secondary();}
@@ -308,9 +269,9 @@ $card-large-footer-padding-vertical-l:          round(($global-large-gutter * 0.
 
 // Color Mode
 @if ( $card-secondary-color-mode == light ) { .uk-card-secondary.uk-card-body { @extend .uk-light !optional;} }
-@if ( $card-secondary-color-mode == light ) { .uk-card-secondary > :not([class*='uk-card-media']) { @extend .uk-light !optional;} }
+@if ( $card-secondary-color-mode == light ) { .uk-card-secondary > :not([class*="uk-card-media"]) { @extend .uk-light !optional;} }
 @if ( $card-secondary-color-mode == dark ) { .uk-card-secondary.uk-card-body { @extend .uk-dark !optional;} }
-@if ( $card-secondary-color-mode == dark ) { .uk-card-secondary > :not([class*='uk-card-media']) { @extend .uk-dark !optional;} }
+@if ( $card-secondary-color-mode == dark ) { .uk-card-secondary > :not([class*="uk-card-media"]) { @extend .uk-dark !optional;} }
 
 
 /* Size modifier
@@ -376,8 +337,6 @@ $card-large-footer-padding-vertical-l:          round(($global-large-gutter * 0.
 // Inverse
 // ========================================================================
 
-$inverse-card-badge-background:                      $inverse-global-primary-background !default;
-$inverse-card-badge-color:                           $inverse-global-inverse-color !default;
 
 
 

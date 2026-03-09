@@ -26,21 +26,14 @@
 // Variables
 // ========================================================================
 
-$animation-duration:                             0.5s !default;
-$animation-fade-duration:                        0.8s !default;
-$animation-stroke-duration:                      2s !default;
-$animation-kenburns-duration:                    15s !default;
-$animation-fast-duration:                        0.1s !default;
 
-$animation-slide-small-translate:                10px !default;
-$animation-slide-medium-translate:               50px !default;
 
 
 /* ========================================================================
    Component: Animation
  ========================================================================== */
 
-[class*='uk-animation-'] { animation: $animation-duration ease-out both; }
+[class*="uk-animation-"] { animation: $animation-duration ease-out both; }
 
 
 /* Animations
@@ -138,7 +131,7 @@ $animation-slide-medium-translate:               50px !default;
 /* Toggle animation based on the State of the Parent Element
  ========================================================================== */
 
-.uk-animation-toggle:not(:hover):not(:focus) [class*='uk-animation-'] { animation-name: none; }
+.uk-animation-toggle:not(:hover):not(:focus) [class*="uk-animation-"] { animation-name: none; }
 
 
 /* Keyframes used by animation classes
